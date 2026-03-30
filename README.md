@@ -17,4 +17,9 @@ npx --yes serve .
 3. Settings → Pages → ветка `main`, папка `/ (root)` или `/docs`.
 4. Ссылка будет: `https://<user>.github.io/daniil-portfolio/`
 
-В откликах и резюме используйте эту ссылку вместо чужих сайтов.
+Демо внутри этого же репозитория (подпапки на GitHub Pages):
+
+- `https://<user>.github.io/daniil-portfolio/landing-traffic-demo/`
+- `https://<user>.github.io/daniil-portfolio/tilda-style-ig-tg-example/`
+
+В откликах и резюме используйте основную ссылку на портфолио вместо чужих сайтов.

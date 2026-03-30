@@ -263,6 +263,21 @@ main {
   font-weight: 600;
 }
 
+.card__links {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.card__sep {
+  color: var(--text-soft);
+  opacity: 0.6;
+}
+
 .card__note {
   font-size: 0.85rem;
   color: var(--text-soft);

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0f14" />
+    <meta
+      name="description"
+      content="Демо лендинга под рекламный трафик: скорость, адаптив, Метрика, цели."
+    />
+    <title>Демо · лендинг под трафик</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Яндекс.Метрика: замените XXXXXXXX на ваш счётчик -->
+    <!--
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,n){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),n=e.getElementsByTagName(t)[0],k.async=1,k.src=r,n.parentNode.insertBefore(k,n)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(XXXXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true });
+    </script>
+    -->
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <span class="logo" aria-hidden="true">◆</span>
+        <span class="header__badge">демо для портфолио</span>
+        <a class="header__cta btn btn--ghost btn--sm" href="#lead" data-goal="header_cta">Оставить заявку</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">мобильный трафик · быстрая загрузка</p>
+            <h1 class="hero__title">
+              Лендинг, который не теряет конверсию на&nbsp;первом экране
+            </h1>
+            <p class="hero__lead">
+              Чистая вёрстка, адаптив, кнопки и формы с целями в Метрике — без лишнего кода и тяжёлых библиотек.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#lead" data-goal="hero_primary">Получить консультацию</a>
+              <button type="button" class="btn btn--ghost" data-scroll="#benefits" data-goal="hero_secondary">
+                Как это работает
+              </button>
+            </div>
+            <ul class="hero__stats" aria-label="Ключевые параметры">
+              <li><strong>&lt;1s</strong><span>цель по FCP</span></li>
+              <li><strong>100%</strong><span>адаптив</span></li>
+              <li><strong>YM</strong><span>цели и события</span></li>
+            </ul>
+          </div>
+          <div class="hero__card" aria-hidden="true">
+            <div class="mock-card">
+              <div class="mock-card__line"></div>
+              <div class="mock-card__line mock-card__line--short"></div>
+              <div class="mock-card__pill"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits" id="benefits">
+        <div class="container">
+          <h2 class="section-title">Три блока — достаточно для теста гипотезы</h2>
+          <p class="section-sub">
+            Типовая структура под арбитраж: оффер → доверие/механика → заявка. Всё готово к подключению пикселей и редиректов.
+          </p>
+          <div class="benefits__grid">
+            <article class="tile">
+              <span class="tile__icon" aria-hidden="true">01</span>
+              <h3 class="tile__title">Скорость</h3>
+              <p class="tile__text">Системные шрифты, минификация, без лишних зависимостей — меньше отказов с мобильного трафика.</p>
+            </article>
+            <article class="tile">
+              <span class="tile__icon" aria-hidden="true">02</span>
+              <h3 class="tile__title">Метрика</h3>
+              <p class="tile__text">Цели на клики, отправку формы, скролл к блоку. Удобно смотреть воронку в отчётах.</p>
+            </article>
+            <article class="tile">
+              <span class="tile__icon" aria-hidden="true">03</span>
+              <h3 class="tile__title">Механика</h3>
+              <p class="tile__text">Кнопки, якоря, редиректы по UTM, валидация формы — под задачу кампании.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="lead" id="lead">
+        <div class="container lead__inner">
+          <div class="lead__copy">
+            <h2 class="section-title section-title--light">Заявка за 20 секунд</h2>
+            <p class="lead__sub">
+              Демо-форма: в бою сюда уходит отправка в CRM/Telegram и цель <code>form_submit</code> в Метрике.
+            </p>
+          </div>
+          <form class="form" id="lead-form" novalidate>
+            <label class="form__field">
+              <span class="form__label">Имя</span>
+              <input class="form__input" name="name" type="text" autocomplete="name" required placeholder="Как к вам обращаться" />
+            </label>
+            <label class="form__field">
+              <span class="form__label">Телеграм или телефон</span>
+              <input
+                class="form__input"
+                name="contact"
+                type="text"
+                autocomplete="tel"
+                required
+                placeholder="@username или +7"
+              />
+            </label>
+            <button type="submit" class="btn btn--primary btn--block" data-goal="form_submit">
+              Отправить
+            </button>
+            <p class="form__note">
+              Нажимая кнопку, вы соглашаетесь с обработкой данных (текст для демо).
+            </p>
+            <p class="form__success" id="form-success" hidden>Спасибо! Заявка принята (демо).</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__text">© демо-лендинг для портфолио · вёрстка без дизайна заказчика</p>
+        <a class="footer__link" href="#main" data-scroll="#main">Наверх</a>
+      </div>
+    </footer>
+
+    <div class="sticky-cta" role="region" aria-label="Быстрая заявка">
+      <a class="btn btn--primary btn--block" href="#lead" data-goal="sticky_cta">Оставить заявку</a>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
