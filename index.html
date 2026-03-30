@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Даниил Кузовлев — веб-разработка, Python, Telegram</title>
+  <meta name="description" content="Fullstack-разработчик: React, TypeScript, Python, Telegram-боты и Mini Apps. Воркута, удалённо." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="#">ДК<span class="logo__dot">.</span></a>
+      <nav class="nav" aria-label="Навигация">
+        <a href="#work">Работы</a>
+        <a href="#stack">Стек</a>
+        <a href="#contact">Контакт</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <p class="hero__eyebrow">Воркута · удалённо · с 2015 года</p>
+      <h1 class="hero__title">
+        <span class="hero__name">Даниил Кузовлев</span>
+        <span class="hero__nick">m0nsty</span>
+      </h1>
+      <p class="hero__lead">
+        Делаю <strong>сайты</strong> и <strong>веб-приложения</strong> на React, бэкенд и ботов на Python,
+        <strong>Telegram Mini Apps</strong> и интеграции. От лендинга до админки и деплоя в Docker.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="mailto:daniilterfa@gmail.com">Написать</a>
+        <a class="btn btn--ghost" href="https://t.me/m0nsty" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn btn--ghost" href="https://github.com/Daniilbyr" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="work-heading">
+      <div class="section-head">
+        <h2 id="work-heading">Избранные работы</h2>
+        <p class="section-head__sub">Открытые репозитории и демо — можно посмотреть код.</p>
+      </div>
+      <ul class="work__grid">
+        <li>
+          <article class="card">
+            <h3 class="card__title">Telegram Mini App</h3>
+            <p class="card__text">Кабинет, настройки, тема Telegram, TanStack Query, Vitest.</p>
+            <a class="card__link" href="https://github.com/Daniilbyr/tma-cabinet-demo" target="_blank" rel="noopener">Репозиторий →</a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3 class="card__title">Лендинг под трафик</h3>
+            <p class="card__text">Mobile-first, форма, Яндекс.Метрика и цели. Статика.</p>
+            <a class="card__link" href="https://github.com/Daniilbyr/landing-traffic-demo" target="_blank" rel="noopener">Репозиторий →</a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3 class="card__title">Веб-приложение учёта</h3>
+            <p class="card__text">Склад, заказы, отчёты, графики; опционально Electron для Windows.</p>
+            <span class="card__note">Код по запросу / демо</span>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3 class="card__title">Telegram-боты</h3>
+            <p class="card__text">Лиды, рассылки, оплата, интеграции с таблицами и CRM.</p>
+            <span class="card__note">Кейсы в портфолио исполнителя</span>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="stack" id="stack" aria-labelledby="stack-heading">
+      <div class="section-head">
+        <h2 id="stack-heading">Стек</h2>
+      </div>
+      <ul class="stack__list">
+        <li>React 19, TypeScript, Vite</li>
+        <li>Python, FastAPI, боты</li>
+        <li>PostgreSQL, Redis — по задаче</li>
+        <li>Docker, Git, CI/CD — по задаче</li>
+        <li>Electron, Telegram Web Apps</li>
+      </ul>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="contact__box">
+        <h2 id="contact-heading">Связь</h2>
+        <p class="contact__text">
+          <a href="mailto:daniilterfa@gmail.com">daniilterfa@gmail.com</a>
+          ·
+          <a href="https://t.me/m0nsty" target="_blank" rel="noopener">@m0nsty</a>
+        </p>
+        <p class="contact__lang">Русский — родной · English — свободно</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Даниил Кузовлев · портфолио для откликов и заказов</p>
+  </footer>
+</body>
+</html>
