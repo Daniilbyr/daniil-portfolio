@@ -4,9 +4,10 @@
   --ink: #0c0b0a;
   --ink-soft: #3d3a37;
   --ink-faint: #8a8680;
-  /* Нейтраль stone + чистый белый — без жёлтого «бежа» */
-  --bg-page: #f0f0ef;
-  --bg-page-mid: #ebebea;
+  /* Холодные нейтрали (slate), без жёлтого/бежевого ухода */
+  --bg-page-top: #f4f5f8;
+  --bg-page: #eceef1;
+  --bg-page-mid: #e3e5ea;
   --bg-paper: #ffffff;
   --line: rgba(12, 11, 10, 0.09);
   --line-strong: rgba(12, 11, 10, 0.16);
@@ -79,7 +80,12 @@ html {
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
-  background: linear-gradient(180deg, #f7f7f6 0%, var(--bg-page) 24%, var(--bg-page-mid) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--bg-page-top) 0%,
+    var(--bg-page) 26%,
+    var(--bg-page-mid) 100%
+  );
 }
 
 .page-bg__orb {
@@ -97,8 +103,8 @@ html {
   left: -18%;
   background: radial-gradient(
     circle at 32% 32%,
-    rgba(92, 77, 63, 0.14) 0%,
-    rgba(180, 175, 168, 0.1) 48%,
+    rgba(165, 178, 198, 0.2) 0%,
+    rgba(195, 205, 218, 0.11) 48%,
     transparent 70%
   );
   animation: apollo-bg-float-1 34s ease-in-out infinite;
@@ -111,8 +117,8 @@ html {
   right: -22%;
   background: radial-gradient(
     circle at 42% 38%,
-    rgba(200, 195, 188, 0.22) 0%,
-    rgba(160, 155, 148, 0.1) 52%,
+    rgba(200, 208, 220, 0.22) 0%,
+    rgba(170, 180, 195, 0.12) 52%,
     transparent 68%
   );
   animation: apollo-bg-float-2 40s ease-in-out infinite;
@@ -125,8 +131,8 @@ html {
   left: 5%;
   background: radial-gradient(
     circle at 48% 52%,
-    rgba(120, 115, 108, 0.12) 0%,
-    rgba(92, 77, 63, 0.08) 45%,
+    rgba(140, 152, 168, 0.14) 0%,
+    rgba(120, 132, 150, 0.09) 45%,
     transparent 72%
   );
   animation: apollo-bg-float-3 46s ease-in-out infinite;
@@ -989,7 +995,7 @@ html {
 .related {
   padding: clamp(4rem, 10vw, 7rem) 0 clamp(5rem, 12vw, 8.5rem);
   border-top: 1px solid var(--line);
-  background: linear-gradient(180deg, #fafafa 0%, var(--bg-page) 100%);
+  background: linear-gradient(180deg, var(--bg-page-top) 0%, var(--bg-page) 100%);
 }
 
 .related__head {
