@@ -22,46 +22,7 @@ function New-LinearBrush {
 $root = Join-Path $PSScriptRoot '..' | Resolve-Path
 $img = Join-Path $root 'img'
 
-# --- Hero PDP 900x1050 ---
-$b = New-Object System.Drawing.Bitmap 900, 1050
-$g = [System.Drawing.Graphics]::FromImage($b)
-$g.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
-$brush = New-LinearBrush 900 1050 ([System.Drawing.Color]::FromArgb(255, 240, 242, 245)) ([System.Drawing.Color]::FromArgb(255, 210, 216, 228)) 135
-$g.FillRectangle($brush, 0, 0, 900, 1050)
-$brush.Dispose()
-$path = New-Object System.Drawing.Drawing2D.GraphicsPath
-$path.AddEllipse(-120, 200, 1140, 900)
-$pb = New-Object System.Drawing.Drawing2D.PathGradientBrush $path
-$pb.CenterColor = [System.Drawing.Color]::FromArgb(0, 255, 255, 255)
-$pb.SurroundColors = @([System.Drawing.Color]::FromArgb(35, 15, 23, 42))
-$g.FillPath($pb, $path)
-$pb.Dispose(); $path.Dispose()
-$bot = New-Object System.Drawing.Drawing2D.GraphicsPath
-$bot.AddClosedCurve(@(
-  [System.Drawing.PointF]::new(330, 320), [System.Drawing.PointF]::new(330, 780), [System.Drawing.PointF]::new(360, 820),
-  [System.Drawing.PointF]::new(540, 820), [System.Drawing.PointF]::new(570, 780), [System.Drawing.PointF]::new(570, 320),
-  [System.Drawing.PointF]::new(520, 280), [System.Drawing.PointF]::new(380, 280)
-))
-$gb = New-LinearBrush 900 1050 ([System.Drawing.Color]::FromArgb(255, 30, 41, 59)) ([System.Drawing.Color]::FromArgb(255, 15, 23, 42)) 0
-$g.FillPath($gb, $bot)
-$gb.Dispose()
-$shine = New-LinearBrush 900 1050 ([System.Drawing.Color]::FromArgb(90, 255, 255, 255)) ([System.Drawing.Color]::FromArgb(0, 255, 255, 255)) 15
-$g.FillRectangle($shine, 400, 300, 80, 480)
-$shine.Dispose()
-$cap = [System.Drawing.RectangleF]::new(410, 210, 80, 72)
-$cb = New-LinearBrush 900 1050 ([System.Drawing.Color]::FromArgb(255, 60, 60, 60)) ([System.Drawing.Color]::FromArgb(255, 10, 10, 10)) 90
-$g.FillEllipse($cb, $cap)
-$cb.Dispose()
-$sh = New-Object System.Drawing.Drawing2D.GraphicsPath
-$sh.AddEllipse(210, 920, 480, 48)
-$sb = New-Object System.Drawing.Drawing2D.PathGradientBrush $sh
-$sb.CenterColor = [System.Drawing.Color]::FromArgb(55, 0, 0, 0)
-$sb.SurroundColors = @([System.Drawing.Color]::FromArgb(0, 0, 0, 0))
-$g.FillPath($sb, $sh)
-$sb.Dispose(); $sh.Dispose()
-$g.Dispose()
-Save-Jpeg (Join-Path $img 'products\pdp-hero.jpg') $b
-$b.Dispose()
+# Герой PDP — вектор в index.html (inline SVG), не генерируем JPEG.
 
 # --- Card Slate 800x800 ---
 $b = New-Object System.Drawing.Bitmap 800, 800
