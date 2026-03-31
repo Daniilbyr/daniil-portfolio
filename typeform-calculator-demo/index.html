@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Демо квиза-калькулятора · портфолио</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="top">
+        <div class="logo" aria-hidden="true">
+          <svg class="logo__mark" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect x="4" y="4" width="32" height="32" rx="8" stroke="currentColor" stroke-width="2" />
+            <path d="M12 22 L20 14 L28 22 M20 14 V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <span class="logo__text">Demo Brand</span>
+        </div>
+        <p class="top__hint">Демо для портфолио: логика многошагового калькулятора, цены в конфиге</p>
+      </header>
+
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Прогресс">
+        <div class="progress__bar" id="progressBar"></div>
+      </div>
+
+      <main class="stage" id="stage"></main>
+
+      <footer class="foot">
+        <button type="button" class="btn btn--ghost" id="btnBack" hidden>Назад</button>
+        <div class="foot__spacer"></div>
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
