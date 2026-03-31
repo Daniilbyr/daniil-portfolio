@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0c0b0a" />
+    <meta name="color-scheme" content="light" />
     <title>Apollo — Ombre Devision | парфюм</title>
     <meta
       name="description"
-      content="Apollo — мужской уход премиум-класса. Карточка товара: минимализм, чистая вёрстка."
+      content="Ombre Devision — eau de parfum для мужчин. Доставка, подлинность, возврат 14 дней. Apollo."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,60 +50,79 @@
       <div class="container container--narrow">
         <nav class="breadcrumbs reveal" aria-label="Хлебные крошки" data-reveal>
           <a href="#">Главная</a>
-          <span class="breadcrumbs__sep">/</span>
+          <span class="breadcrumbs__sep" aria-hidden="true">/</span>
           <a href="#">Каталог</a>
-          <span class="breadcrumbs__sep">/</span>
+          <span class="breadcrumbs__sep" aria-hidden="true">/</span>
           <a href="#">Парфюм</a>
-          <span class="breadcrumbs__sep">/</span>
+          <span class="breadcrumbs__sep" aria-hidden="true">/</span>
           <span class="breadcrumbs__current">Ombre Devision</span>
         </nav>
 
-        <article class="pdp">
+        <article class="pdp" itemscope itemtype="https://schema.org/Product">
+          <meta itemprop="name" content="Ombre Devision" />
+          <meta itemprop="description" content="Eau de parfum, древесно-пряный силуэт." />
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="visually-hidden">
+            <meta itemprop="priceCurrency" content="USD" />
+            <meta itemprop="price" content="158" />
+            <link itemprop="availability" href="https://schema.org/InStock" />
+          </div>
+
           <div class="pdp__grid">
             <div class="pdp__gallery reveal reveal--delay-1" data-reveal>
-              <figure class="pdp__figure">
-                <!-- Основной кадр: парфюм; fallback — picsum если Unsplash недоступен -->
-                <img
-                  class="pdp__photo js-img-fallback"
-                  src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&amp;fit=crop&amp;w=1200&amp;h=1400&amp;q=85"
-                  data-fallback="https://picsum.photos/id/312/900/1050"
-                  data-local="img/placeholder-tall.svg"
-                  alt="Флакон парфюма на камне"
-                  width="900"
-                  height="1050"
-                  loading="eager"
-                  decoding="async"
-                  fetchpriority="high"
-                  referrerpolicy="no-referrer"
-                />
-              </figure>
+              <div class="pdp__media js-pdp-media">
+                <div class="pdp__skeleton" aria-hidden="true"></div>
+                <figure class="pdp__figure">
+                  <img
+                    class="pdp__photo js-img-fallback js-img-load"
+                    src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&amp;fit=crop&amp;w=1200&amp;h=1400&amp;q=85"
+                    data-fallback="https://picsum.photos/id/312/900/1050"
+                    data-local="img/placeholder-tall.svg"
+                    alt="Флакон парфюма на камне"
+                    width="900"
+                    height="1050"
+                    loading="eager"
+                    decoding="async"
+                    fetchpriority="high"
+                    referrerpolicy="no-referrer"
+                  />
+                </figure>
+                <button type="button" class="pdp__zoom-hint" tabindex="-1" aria-hidden="true">Увеличить</button>
+              </div>
             </div>
+
             <div class="pdp__info reveal reveal--delay-2" data-reveal>
               <div class="pdp__title-row">
                 <div class="pdp__title-block">
                   <p class="pdp__eyebrow">Мужская парфюмерия</p>
-                  <h1 class="pdp__title">Ombre Devision</h1>
+                  <h1 class="pdp__title" itemprop="name">Ombre Devision</h1>
                 </div>
-                <button type="button" class="icon-fav" aria-label="В избранное">
+                <button type="button" class="icon-fav" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                   </svg>
                 </button>
               </div>
+
               <p class="pdp__subtitle">Eau de parfum · сдержанный древесно-пряный силуэт</p>
+
+              <div class="pdp__meta">
+                <span class="pdp__sku"><span class="pdp__sku-label">Арт.</span> AP-OMB-EDP-30</span>
+                <span class="pdp__stock pdp__stock--in" role="status">В наличии · отгрузка 1–2 дня</span>
+              </div>
+
               <p class="pdp__price">
                 <span class="pdp__price-currency" aria-hidden="true">$</span>
-                <span class="pdp__price-value">158</span>
+                <span class="pdp__price-value" id="pdp-price-main">158</span>
               </p>
 
               <div class="pdp__divider" aria-hidden="true"></div>
 
               <div class="pdp__field">
-                <p class="pdp__label">Объём</p>
-                <div class="size-row" role="group" aria-label="Выбор объёма">
-                  <button type="button" class="size size--active">30 ml</button>
-                  <button type="button" class="size">50 ml</button>
-                  <button type="button" class="size">100 ml</button>
+                <p class="pdp__label" id="size-label">Объём</p>
+                <div class="size-row" role="radiogroup" aria-labelledby="size-label">
+                  <button type="button" class="size size--active" role="radio" aria-checked="true" data-price="158">30 ml</button>
+                  <button type="button" class="size" role="radio" aria-checked="false" data-price="198">50 ml</button>
+                  <button type="button" class="size" role="radio" aria-checked="false" data-price="248">100 ml</button>
                 </div>
               </div>
 
@@ -120,11 +141,96 @@
                 <p>Сделано для тех, кто выбирает сдержанную роскошь вместо крика.</p>
               </div>
 
-              <button type="button" class="btn btn--black">ADD TO CART</button>
+              <ul class="pdp__trust" role="list">
+                <li class="pdp__trust-item">
+                  <span class="pdp__trust-ic" aria-hidden="true">✓</span>
+                  Оригинальная продукция · контроль подлинности
+                </li>
+                <li class="pdp__trust-item">
+                  <span class="pdp__trust-ic" aria-hidden="true">✓</span>
+                  Бесплатная доставка от $100 по РФ
+                </li>
+                <li class="pdp__trust-item">
+                  <span class="pdp__trust-ic" aria-hidden="true">✓</span>
+                  Возврат без вопросов 14 дней
+                </li>
+              </ul>
+
+              <button type="button" class="btn btn--black js-main-cta" id="main-cta">Добавить в корзину</button>
+              <p class="pdp__fineprint">Оплата картой, СБП, при получении · рассрочка 0% для постоянных клиентов</p>
             </div>
           </div>
         </article>
       </div>
+
+      <section class="pdp-details" aria-labelledby="details-heading">
+        <div class="container container--narrow">
+          <h2 id="details-heading" class="pdp-details__heading reveal" data-reveal>Полезная информация</h2>
+          <div class="accordion reveal" data-reveal>
+            <div class="accordion__item">
+              <button type="button" class="accordion__trigger" aria-expanded="true" aria-controls="acc-1" id="acc-btn-1">
+                <span>Пирамидка нот</span>
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion__panel" id="acc-1" role="region" aria-labelledby="acc-btn-1">
+                <p>
+                  <strong>Верх:</strong> бергамот, лимон, розовый перец.<br />
+                  <strong>Сердце:</strong> чёрный перец, лаванда, шалфей.<br />
+                  <strong>База:</strong> кедр, ветивер, амбра, кожа.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="acc-2" id="acc-btn-2">
+                <span>Доставка и примерка</span>
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion__panel accordion__panel--hidden" id="acc-2" role="region" aria-labelledby="acc-btn-2" hidden>
+                <p>
+                  Курьер до двери и пункты выдачи. Упаковка без лишних логотипов. Перед оплатой можно осмотреть флакон —
+                  при несоответствии ожиданиям оформляем возврат по правилам сервиса.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button type="button" class="accordion__trigger" aria-expanded="false" aria-controls="acc-3" id="acc-btn-3">
+                <span>Хранение</span>
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+              <div class="accordion__panel accordion__panel--hidden" id="acc-3" role="region" aria-labelledby="acc-btn-3" hidden>
+                <p>Хранить вертикально, вдали от солнца и нагрева. Срок годности после вскрытия — до 24 месяцев при соблюдении условий.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Преимущества сервиса">
+        <div class="container">
+          <ul class="trust-strip__grid">
+            <li class="trust-strip__item">
+              <span class="trust-strip__num">01</span>
+              <span class="trust-strip__title">Подлинность</span>
+              <span class="trust-strip__text">Прямые поставки и проверка партий</span>
+            </li>
+            <li class="trust-strip__item">
+              <span class="trust-strip__num">02</span>
+              <span class="trust-strip__title">Поддержка</span>
+              <span class="trust-strip__text">Персональный менеджер в Telegram</span>
+            </li>
+            <li class="trust-strip__item">
+              <span class="trust-strip__num">03</span>
+              <span class="trust-strip__title">Упаковка</span>
+              <span class="trust-strip__text">Подарочный пакет без доплаты</span>
+            </li>
+            <li class="trust-strip__item">
+              <span class="trust-strip__num">04</span>
+              <span class="trust-strip__title">Возврат</span>
+              <span class="trust-strip__text">14 дней по закону и сервису</span>
+            </li>
+          </ul>
+        </div>
+      </section>
 
       <section class="related" aria-labelledby="related-heading">
         <div class="container">
@@ -135,9 +241,10 @@
           <div class="related__grid">
             <article class="card-mini reveal reveal--delay-1" data-reveal>
               <a href="#" class="card-mini__link">
-                <div class="card-mini__img">
+                <div class="card-mini__img js-card-img">
+                  <div class="card-mini__skeleton" aria-hidden="true"></div>
                   <img
-                    class="js-img-fallback"
+                    class="js-img-fallback js-img-load"
                     src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=85"
                     data-fallback="https://picsum.photos/id/429/800/800"
                     data-local="img/placeholder-square.svg"
@@ -156,9 +263,10 @@
             </article>
             <article class="card-mini reveal reveal--delay-2" data-reveal>
               <a href="#" class="card-mini__link">
-                <div class="card-mini__img">
+                <div class="card-mini__img js-card-img">
+                  <div class="card-mini__skeleton" aria-hidden="true"></div>
                   <img
-                    class="js-img-fallback"
+                    class="js-img-fallback js-img-load"
                     src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=85"
                     data-fallback="https://picsum.photos/id/625/800/800"
                     data-local="img/placeholder-square.svg"
@@ -177,9 +285,10 @@
             </article>
             <article class="card-mini reveal reveal--delay-3" data-reveal>
               <a href="#" class="card-mini__link">
-                <div class="card-mini__img">
+                <div class="card-mini__img js-card-img">
+                  <div class="card-mini__skeleton" aria-hidden="true"></div>
                   <img
-                    class="js-img-fallback"
+                    class="js-img-fallback js-img-load"
                     src="https://images.unsplash.com/photo-1571875257727-256c39da42af?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=85"
                     data-fallback="https://picsum.photos/id/488/800/800"
                     data-local="img/placeholder-square.svg"
@@ -201,13 +310,23 @@
       </section>
     </main>
 
+    <div class="pdp-sticky" id="pdp-sticky" role="region" aria-label="Быстрое оформление" hidden>
+      <div class="pdp-sticky__inner container">
+        <div class="pdp-sticky__product">
+          <span class="pdp-sticky__title">Ombre Devision</span>
+          <span class="pdp-sticky__price"><span class="pdp-sticky__currency">$</span><span class="pdp-sticky__value" id="pdp-price-sticky">158</span></span>
+        </div>
+        <button type="button" class="btn btn--black btn--sticky pdp-sticky__btn">В корзину</button>
+      </div>
+    </div>
+
     <footer class="site-footer site-footer--editorial">
       <div class="container">
         <div class="footer-grid reveal" data-reveal>
           <div class="footer-visual">
             <div class="footer-visual__cell">
               <img
-                class="js-img-fallback"
+                class="js-img-fallback js-img-load"
                 src="https://images.unsplash.com/photo-1592945403244-b3fbafd7b650?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80"
                 data-fallback="https://picsum.photos/id/338/400/400"
                 data-local="img/placeholder-square.svg"
@@ -220,7 +339,7 @@
             </div>
             <div class="footer-visual__cell">
               <img
-                class="js-img-fallback"
+                class="js-img-fallback js-img-load"
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80"
                 data-fallback="https://picsum.photos/id/64/400/400"
                 data-local="img/placeholder-square.svg"
@@ -239,7 +358,7 @@
             </div>
             <div class="footer-visual__cell">
               <img
-                class="js-img-fallback"
+                class="js-img-fallback js-img-load"
                 src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80"
                 data-fallback="https://picsum.photos/id/453/400/400"
                 data-local="img/placeholder-square.svg"
@@ -263,14 +382,19 @@
             <a href="#">Корзина (0)</a>
           </div>
           <div class="footer-social">
-            <a href="#">TELEGRAM</a>
-            <a href="#">INSTAGRAM</a>
-            <a href="#">PINTEREST</a>
-            <a href="#">YOUTUBE</a>
-            <a href="#">LINKED IN</a>
+            <a href="#" rel="noopener noreferrer">TELEGRAM</a>
+            <a href="#" rel="noopener noreferrer">INSTAGRAM</a>
+            <a href="#" rel="noopener noreferrer">PINTEREST</a>
+            <a href="#" rel="noopener noreferrer">YOUTUBE</a>
+            <a href="#" rel="noopener noreferrer">LINKED IN</a>
           </div>
         </div>
-        <p class="footer-copy">© ALL RIGHTS RESERVED 2026</p>
+        <div class="footer-legal">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Оферта</a>
+          <a href="#">Реквизиты</a>
+        </div>
+        <p class="footer-copy">© 2026 Apollo · мужской уход и парфюмерия</p>
       </div>
     </footer>
 
