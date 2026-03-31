@@ -29,9 +29,10 @@
       var wrap = el.closest('.js-pdp-media') || el.closest('.js-card-img');
       if (wrap) wrap.classList.add('is-loaded');
     }
-    if (el.tagName === 'IMG' && el.complete && el.naturalWidth) {
+    var tag = (el.tagName || '').toUpperCase();
+    if (tag === 'IMG' && el.complete && el.naturalWidth) {
       done();
-    } else if (el.tagName === 'IMG') {
+    } else if (tag === 'IMG') {
       el.addEventListener('load', done);
       el.addEventListener('error', done);
     } else {

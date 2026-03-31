@@ -445,7 +445,8 @@ html {
     visibility 0.5s;
 }
 
-.pdp__media.is-loaded .pdp__skeleton {
+.pdp__media.is-loaded .pdp__skeleton,
+.pdp__media:has(.pdp__figure svg.pdp__photo) .pdp__skeleton {
   opacity: 0;
   visibility: hidden;
 }
@@ -512,7 +513,8 @@ html {
   pointer-events: none;
 }
 
-.pdp__media.is-loaded .pdp__zoom-hint {
+.pdp__media.is-loaded .pdp__zoom-hint,
+.pdp__media:has(.pdp__figure svg.pdp__photo) .pdp__zoom-hint {
   opacity: 1;
 }
 
@@ -1075,7 +1077,8 @@ html {
     visibility 0.45s;
 }
 
-.card-mini__img.is-loaded .card-mini__skeleton {
+.card-mini__img.is-loaded .card-mini__skeleton,
+.card-mini__img:has(svg) .card-mini__skeleton {
   opacity: 0;
   visibility: hidden;
 }
