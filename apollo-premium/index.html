@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="dns-prefetch" href="https://picsum.photos" />
   </head>
-  <body>
+  <body class="page">
     <a class="skip" href="#main">К содержанию</a>
 
     <header class="site-header">
@@ -78,17 +78,30 @@
             </div>
             <div class="pdp__info reveal reveal--delay-2" data-reveal>
               <div class="pdp__title-row">
-                <h1 class="pdp__title">OMBRE DEVISION</h1>
-                <button type="button" class="icon-fav" aria-label="В избранное">♡</button>
+                <div class="pdp__title-block">
+                  <p class="pdp__eyebrow">Мужская парфюмерия</p>
+                  <h1 class="pdp__title">Ombre Devision</h1>
+                </div>
+                <button type="button" class="icon-fav" aria-label="В избранное">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                  </svg>
+                </button>
               </div>
-              <p class="pdp__price">158 $</p>
+              <p class="pdp__subtitle">Eau de parfum · сдержанный древесно-пряный силуэт</p>
+              <p class="pdp__price">
+                <span class="pdp__price-currency" aria-hidden="true">$</span>
+                <span class="pdp__price-value">158</span>
+              </p>
+
+              <div class="pdp__divider" aria-hidden="true"></div>
 
               <div class="pdp__field">
                 <p class="pdp__label">Объём</p>
                 <div class="size-row" role="group" aria-label="Выбор объёма">
-                  <button type="button" class="size size--active">30 ML</button>
-                  <button type="button" class="size">50 ML</button>
-                  <button type="button" class="size">100 ML</button>
+                  <button type="button" class="size size--active">30 ml</button>
+                  <button type="button" class="size">50 ml</button>
+                  <button type="button" class="size">100 ml</button>
                 </div>
               </div>
 
@@ -115,7 +128,10 @@
 
       <section class="related" aria-labelledby="related-heading">
         <div class="container">
-          <h2 id="related-heading" class="related__title reveal" data-reveal>YOU MIGHT ALSO LIKE</h2>
+          <header class="related__head reveal" data-reveal>
+            <p class="related__eyebrow">Подборка</p>
+            <h2 id="related-heading" class="related__title">Смотрите также</h2>
+          </header>
           <div class="related__grid">
             <article class="card-mini reveal reveal--delay-1" data-reveal>
               <a href="#" class="card-mini__link">
@@ -185,7 +201,7 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer site-footer--editorial">
       <div class="container">
         <div class="footer-grid reveal" data-reveal>
           <div class="footer-visual">
