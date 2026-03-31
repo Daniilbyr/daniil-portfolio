@@ -1,14 +1,14 @@
 (function () {
   'use strict';
 
-  /** Unsplash → Picsum → локальный SVG */
+  /** Запасной src → локальный SVG (без picsum: фиксированные id давали «чужие» фото при блокировке CDN) */
   document.querySelectorAll('img.js-img-fallback').forEach(function (img) {
     img.addEventListener('error', function onErr() {
       var u = img.src || '';
       if (u.indexOf('placeholder-') !== -1) return;
       var fb = img.getAttribute('data-fallback');
       var loc = img.getAttribute('data-local');
-      if (fb && u.indexOf('picsum.photos') === -1) {
+      if (fb && fb.trim() && fb.indexOf('picsum.photos') === -1 && u.indexOf('picsum.photos') === -1) {
         img.src = fb;
         return;
       }

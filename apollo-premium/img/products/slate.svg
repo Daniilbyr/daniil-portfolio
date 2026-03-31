@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="b" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5f6f8"/>
+      <stop offset="100%" style="stop-color:#dce0e8"/>
+    </linearGradient>
+    <linearGradient id="pump" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c2c2c"/>
+      <stop offset="100%" style="stop-color:#0f0f0f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#eef0f4"/>
+  <ellipse cx="400" cy="720" rx="160" ry="22" fill="#000" opacity="0.06"/>
+  <g transform="translate(400,380)">
+    <rect x="-95" y="-200" width="190" height="340" rx="28" fill="url(#b)" stroke="#c5cad4" stroke-width="2"/>
+    <rect x="-88" y="-185" width="176" height="120" rx="8" fill="#fff" opacity="0.5"/>
+    <rect x="-35" y="-255" width="70" height="65" rx="10" fill="url(#pump)"/>
+    <rect x="-22" y="-190" width="44" height="28" rx="6" fill="#1a1a1a"/>
+    <text x="0" y="40" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#4a5568">SLATE</text>
+    <text x="0" y="68" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#718096">H0<?C=L 400 ml</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="am" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b6914"/>
+      <stop offset="100%" style="stop-color:#3d2f0a"/>
+    </linearGradient>
+    <linearGradient id="liq" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#c4a035"/>
+      <stop offset="100%" style="stop-color:#e8d48a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="#f4f1eb"/>
+  <ellipse cx="400" cy="680" rx="140" ry="20" fill="#000" opacity="0.07"/>
+  <g transform="translate(400,360)">
+    <rect x="-28" y="-180" width="56" height="40" rx="8" fill="#1a1a1a"/>
+    <rect x="-18" y="-140" width="36" height="24" rx="4" fill="#2a2a2a"/>
+    <rect x="-55" y="-110" width="110" height="220" rx="36" fill="url(#am)" stroke="#5c4a1a" stroke-width="2"/>
+    <rect x="-45" y="-50" width="90" height="140" rx="24" fill="url(#liq)" opacity="0.85"/>
+    <line x1="0" y1="-115" x2="0" y2="-200" stroke="#2a2a2a" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="0" cy="-210" r="8" fill="#1a1a1a"/>
+    <text x="0" y="160" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#5c4a2a">Iron &amp; Oak</text>
+    <text x="0" y="186" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#7a6a4a"><0A;> 4;O 1>@>4K · 30 ml</text>
+  </g>
+</svg>
