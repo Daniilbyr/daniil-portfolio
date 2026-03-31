@@ -23,17 +23,19 @@
     });
   });
 
-  /** Снятие скелетона после загрузки изображения */
-  document.querySelectorAll('img.js-img-load').forEach(function (img) {
+  /** Снятие скелетона после загрузки изображения (img или встроенный svg) */
+  document.querySelectorAll('img.js-img-load, svg.js-img-load').forEach(function (el) {
     function done() {
-      var wrap = img.closest('.js-pdp-media') || img.closest('.js-card-img');
+      var wrap = el.closest('.js-pdp-media') || el.closest('.js-card-img');
       if (wrap) wrap.classList.add('is-loaded');
     }
-    if (img.complete && img.naturalWidth) {
+    if (el.tagName === 'IMG' && el.complete && el.naturalWidth) {
       done();
+    } else if (el.tagName === 'IMG') {
+      el.addEventListener('load', done);
+      el.addEventListener('error', done);
     } else {
-      img.addEventListener('load', done);
-      img.addEventListener('error', done);
+      requestAnimationFrame(done);
     }
   });
 

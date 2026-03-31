@@ -477,6 +477,7 @@ html {
 }
 
 .pdp__figure img,
+.pdp__figure svg.pdp__photo,
 .pdp__photo {
   display: block;
   width: 100%;
@@ -487,7 +488,8 @@ html {
   transition: transform 1s var(--ease);
 }
 
-.pdp__gallery:hover .pdp__figure img {
+.pdp__gallery:hover .pdp__figure img,
+.pdp__gallery:hover .pdp__figure svg.pdp__photo {
   transform: scale(1.02);
 }
 
@@ -1078,7 +1080,8 @@ html {
   visibility: hidden;
 }
 
-.card-mini__img img {
+.card-mini__img img,
+.card-mini__img svg {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -1088,7 +1091,8 @@ html {
   transition: transform 0.85s var(--ease);
 }
 
-.card-mini__link:hover .card-mini__img img {
+.card-mini__link:hover .card-mini__img img,
+.card-mini__link:hover .card-mini__img svg {
   transform: scale(1.05);
 }
 
@@ -1198,7 +1202,8 @@ html {
   aspect-ratio: 1;
 }
 
-.footer-visual__cell img {
+.footer-visual__cell img,
+.footer-visual__cell svg.footer-mosaic {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1287,6 +1292,14 @@ html {
   transform: translateY(0);
 }
 
+/* Галерея и карточки с фото: не держать opacity:0 до JS (старый кэш, URL без / в конце) */
+.pdp__gallery[data-reveal],
+article.card-mini[data-reveal],
+.footer-grid[data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
 .reveal--delay-1 {
   transition-delay: 0.06s;
 }
@@ -1310,7 +1323,8 @@ html {
     transform: none;
   }
 
-  .pdp__gallery:hover .pdp__figure img {
+  .pdp__gallery:hover .pdp__figure img,
+  .pdp__gallery:hover .pdp__figure svg.pdp__photo {
     transform: none;
   }
 }
