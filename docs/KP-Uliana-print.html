@@ -26,6 +26,8 @@
     .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.25rem; }
     .note { font-style: italic; color: var(--muted); margin: 1rem 0; }
     .no-print { margin: 1rem 0 2rem; padding: 0.75rem 1rem; background: #f0f7ff; border: 1px solid #b8d4f0; border-radius: 6px; font-size: 0.9rem; }
+    .url-warning { margin: 1rem 0; padding: 0.85rem 1rem; background: #fff8e6; border: 1px solid #e6c200; border-radius: 6px; font-size: 0.88rem; line-height: 1.5; }
+    .url-warning code { font-size: 0.85em; word-break: break-all; background: #fff; padding: 0.1em 0.25em; }
     hr { border: none; border-top: 1px solid #ddd; margin: 1.5rem 0; }
     a { color: #0b57d0; }
     @media print {
@@ -36,6 +38,13 @@
   </style>
 </head>
 <body>
+  <div class="no-print url-warning">
+    <strong>Открывать только по полной ссылке.</strong> Адрес вида <code>http://docs/KP-Uliana-print.html</code> не работает (это не путь в интернете). Скопируйте один из вариантов:
+    <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem;">
+      <li><strong>Страница в браузере (удобно для PDF):</strong><br /><a href="https://daniilbyr.github.io/daniil-portfolio/docs/KP-Uliana-print.html">https://daniilbyr.github.io/daniil-portfolio/docs/KP-Uliana-print.html</a></li>
+      <li><strong>Скачать файлом (правый клик → «Сохранить ссылку как…»):</strong><br /><a href="https://raw.githubusercontent.com/Daniilbyr/daniil-portfolio/main/docs/KP-Uliana-print.html">https://raw.githubusercontent.com/Daniilbyr/daniil-portfolio/main/docs/KP-Uliana-print.html</a></li>
+    </ul>
+  </div>
   <div class="no-print">
     <strong>Как сохранить в PDF:</strong> в браузере «Печать» → принтер «Сохранить как PDF» / «Microsoft Print to PDF».
   </div>
