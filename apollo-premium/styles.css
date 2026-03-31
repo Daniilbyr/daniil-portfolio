@@ -441,7 +441,7 @@ html {
   z-index: 1;
 }
 
-.pdp__figure img.pdp__photo {
+.pdp__figure img {
   display: block;
   width: 100%;
   height: auto;
@@ -451,18 +451,20 @@ html {
   transition: transform 1s var(--ease);
 }
 
-.pdp__figure .pdp__photo--placeholder {
+/* Inline SVG: без object-fit — иначе в части браузеров колбасит ширину («палка») */
+.pdp__figure svg.pdp__photo,
+svg.pdp__photo {
   display: block;
   width: 100%;
+  height: auto;
+  max-width: 100%;
   aspect-ratio: 6 / 7;
-  min-height: 14rem;
-  background: linear-gradient(168deg, #eef1f6 0%, #e4e8f0 45%, #d9dee8 100%);
-  border: 1px dashed rgba(12, 11, 10, 0.14);
+  vertical-align: middle;
   transition: transform 1s var(--ease);
 }
 
-.pdp__gallery:hover .pdp__figure img.pdp__photo,
-.pdp__gallery:hover .pdp__figure .pdp__photo--placeholder {
+.pdp__gallery:hover .pdp__figure img,
+.pdp__gallery:hover .pdp__figure svg.pdp__photo {
   transform: scale(1.02);
 }
 
@@ -486,7 +488,7 @@ html {
 }
 
 .pdp__media.is-loaded .pdp__zoom-hint,
-.pdp__media:has(.pdp__figure .pdp__photo) .pdp__zoom-hint {
+.pdp__media:has(.pdp__figure svg.pdp__photo) .pdp__zoom-hint {
   opacity: 1;
 }
 
@@ -1047,19 +1049,18 @@ html {
   transition: transform 0.85s var(--ease);
 }
 
-.card-mini__placeholder {
+.card-mini__img svg {
   position: relative;
   z-index: 2;
   width: 100%;
   height: 100%;
-  min-height: 10rem;
-  background: linear-gradient(148deg, #eceef3 0%, #dfe4ec 100%);
-  border: 1px dashed rgba(12, 11, 10, 0.12);
+  display: block;
+  object-fit: contain;
   transition: transform 0.85s var(--ease);
 }
 
 .card-mini__link:hover .card-mini__img img,
-.card-mini__link:hover .card-mini__placeholder {
+.card-mini__link:hover .card-mini__img svg {
   transform: scale(1.05);
 }
 
@@ -1177,15 +1178,6 @@ html {
   display: block;
 }
 
-.footer-mosaic--placeholder {
-  width: 100%;
-  height: 100%;
-  min-height: 5rem;
-  display: block;
-  background: rgba(255, 252, 248, 0.05);
-  border: 1px dashed rgba(255, 252, 248, 0.14);
-}
-
 .footer-visual__cell--logo {
   display: flex;
   flex-direction: column;
@@ -1291,8 +1283,8 @@ html {
     transform: none;
   }
 
-  .pdp__gallery:hover .pdp__figure img.pdp__photo,
-  .pdp__gallery:hover .pdp__figure .pdp__photo--placeholder {
+  .pdp__gallery:hover .pdp__figure img,
+  .pdp__gallery:hover .pdp__figure svg.pdp__photo {
     transform: none;
   }
 }
@@ -1322,22 +1314,4 @@ html {
   .pdp__grid {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-/* Тестовая страница (index): пустые ссылки не схлопываются в ноль */
-.site-header .nav-main a:empty {
-  display: inline-block;
-  min-width: 2.75rem;
-  min-height: 0.6rem;
-}
-.site-header .nav-tools__link:empty {
-  display: inline-block;
-  min-width: 3.25rem;
-}
-.footer-nav a:empty,
-.footer-tools a:empty,
-.footer-social a:empty,
-.footer-legal a:empty {
-  display: inline-block;
-  min-width: 2.5rem;
 }
