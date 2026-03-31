@@ -1,24 +1,26 @@
 (function () {
   'use strict';
 
-  /** Запасной src → локальный SVG (без picsum: фиксированные id давали «чужие» фото при блокировке CDN) */
+  /** Запасной src: один раз на картинку, обработчик снимается сразу (иначе цикл error → новый src → error…) */
   document.querySelectorAll('img.js-img-fallback').forEach(function (img) {
     img.addEventListener('error', function onErr() {
+      img.removeEventListener('error', onErr);
       var u = img.src || '';
       if (u.indexOf('placeholder-') !== -1) return;
       var fb = img.getAttribute('data-fallback');
       var loc = img.getAttribute('data-local');
+      var next = '';
       if (fb && fb.trim() && fb.indexOf('picsum.photos') === -1 && u.indexOf('picsum.photos') === -1) {
-        img.src = fb;
-        return;
-      }
-      if (loc) {
+        next = fb;
+      } else if (loc) {
         try {
-          var docBase = document.baseURI || window.location.href;
-          img.src = new URL(loc, docBase).href;
+          next = new URL(loc, document.baseURI || window.location.href).href;
         } catch (e) {
-          img.src = loc;
+          next = loc;
         }
+      }
+      if (next && next !== u) {
+        img.src = next;
       }
     });
   });
@@ -33,8 +35,8 @@
     if (tag === 'IMG' && el.complete && el.naturalWidth) {
       done();
     } else if (tag === 'IMG') {
-      el.addEventListener('load', done);
-      el.addEventListener('error', done);
+      el.addEventListener('load', done, { once: true });
+      el.addEventListener('error', done, { once: true });
     } else {
       requestAnimationFrame(done);
     }
