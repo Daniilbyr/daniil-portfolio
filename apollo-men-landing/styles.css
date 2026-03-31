@@ -246,10 +246,12 @@ body {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(201, 169, 98, 0.15), transparent 55%),
-    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(201, 169, 98, 0.08), transparent 50%),
-    linear-gradient(180deg, #0c0c0c 0%, #15100a 100%);
+  background-color: #0c0c0c;
+  background-image:
+    linear-gradient(180deg, rgba(12, 12, 12, 0.82) 0%, rgba(12, 12, 12, 0.92) 100%),
+    url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero__bg::after {
@@ -489,21 +491,15 @@ body {
 
 .cat-card__visual {
   aspect-ratio: 4/3;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  background: #1a1816;
 }
 
-.cat-card__visual--1 {
-  background-image: linear-gradient(145deg, #2a2420 0%, #4a3f35 100%);
-}
-.cat-card__visual--2 {
-  background-image: linear-gradient(145deg, #1e1e22 0%, #3d3d45 100%);
-}
-.cat-card__visual--3 {
-  background-image: linear-gradient(145deg, #252018 0%, #4a4030 100%);
-}
-.cat-card__visual--4 {
-  background-image: linear-gradient(145deg, #0d1520 0%, #1a3048 100%);
+.cat-card__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .cat-card__title {
@@ -587,19 +583,15 @@ body {
 
 .product__img {
   aspect-ratio: 1;
-  background:
-    linear-gradient(160deg, rgba(201, 169, 98, 0.2) 0%, transparent 50%),
-    linear-gradient(135deg, #2c2520 0%, #1a1614 100%);
+  overflow: hidden;
+  background: #1a1816;
 }
 
-.product__img--b {
-  background: linear-gradient(135deg, #3a3530 0%, #1f1c1a 100%);
-}
-.product__img--c {
-  background: linear-gradient(135deg, #2a3038 0%, #151820 100%);
-}
-.product__img--d {
-  background: linear-gradient(135deg, #352828 0%, #1a1212 100%);
+.product__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .product__body {
