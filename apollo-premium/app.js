@@ -1,23 +1,46 @@
 (function () {
   'use strict';
 
-  /** Если Unsplash недоступен — подставляем URL из data-fallback (picsum). */
+  /** Unsplash → Picsum → локальный SVG в /apollo-premium/img/ */
   document.querySelectorAll('img.js-img-fallback').forEach(function (img) {
-    img.addEventListener('error', function onError() {
+    img.addEventListener('error', function onErr() {
+      var u = img.src || '';
+      if (u.indexOf('placeholder-') !== -1) {
+        return;
+      }
+
       var fb = img.getAttribute('data-fallback');
-      if (fb && img.src.indexOf('picsum.photos') === -1) {
-        img.removeEventListener('error', onError);
+      var loc = img.getAttribute('data-local');
+
+      if (fb && u.indexOf('picsum.photos') === -1) {
         img.src = fb;
+        return;
+      }
+
+      if (loc) {
+        try {
+          img.src = new URL(loc, window.location.href).href;
+        } catch (e) {
+          img.src = loc;
+        }
       }
     });
   });
 
-  /** Плавное появление секций (отключается при prefers-reduced-motion в CSS). */
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var nodes = document.querySelectorAll('[data-reveal]');
 
   function revealEl(el) {
     el.classList.add('is-visible');
+  }
+
+  function revealVisibleNow() {
+    nodes.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 1.08 && r.bottom > -40) {
+        revealEl(el);
+      }
+    });
   }
 
   if (!reduceMotion && 'IntersectionObserver' in window) {
@@ -30,16 +53,16 @@
           }
         });
       },
-      { root: null, rootMargin: '0px 0px 40px 0px', threshold: 0.06 }
+      { root: null, rootMargin: '0px 0px 80px 0px', threshold: 0 }
     );
     nodes.forEach(function (el) {
       io.observe(el);
     });
+    requestAnimationFrame(revealVisibleNow);
   } else {
     nodes.forEach(revealEl);
   }
 
-  /** Переключение объёма */
   document.querySelectorAll('.size-row').forEach(function (row) {
     row.querySelectorAll('.size').forEach(function (btn) {
       btn.addEventListener('click', function () {
