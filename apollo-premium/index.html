@@ -19,14 +19,19 @@
       property="og:description"
       content="Ombre Devision — eau de parfum для мужчин. Доставка, подлинность, возврат 14 дней."
     />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+    />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=pro-2026" />
+    <link rel="stylesheet" href="styles.css?v=photos-pro-2026" />
   </head>
   <body class="page">
     <div class="page-bg" aria-hidden="true">
@@ -84,74 +89,20 @@
             <div class="pdp__gallery reveal reveal--delay-1" data-reveal>
               <div class="pdp__media js-pdp-media is-loaded">
                 <figure class="pdp__figure">
-                  <svg
+                  <img
                     class="pdp__photo"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 900 1050"
+                    src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&amp;fit=crop&amp;w=1200&amp;h=1400&amp;q=88&amp;fm=jpg"
+                    srcset="
+                      https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&amp;fit=crop&amp;w=900&amp;q=88&amp;fm=jpg 900w,
+                      https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&amp;fit=crop&amp;w=1200&amp;q=88&amp;fm=jpg 1200w
+                    "
+                    sizes="(max-width: 880px) 100vw, min(52vw, 640px)"
                     width="900"
                     height="1050"
-                    role="img"
-                    aria-label="Ombre Devision — флакон мужского парфюма"
-                    focusable="false"
-                  >
-                    <defs>
-                      <linearGradient id="pdp-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#f0f2f5" />
-                        <stop offset="100%" stop-color="#d8dde4" />
-                      </linearGradient>
-                      <radialGradient id="pdp-shadow" cx="50%" cy="100%" r="55%">
-                        <stop offset="0%" stop-color="#000" stop-opacity="0.22" />
-                        <stop offset="100%" stop-color="#000" stop-opacity="0" />
-                      </radialGradient>
-                      <linearGradient id="pdp-glass" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#1e293b" />
-                        <stop offset="35%" stop-color="#334155" />
-                        <stop offset="50%" stop-color="#475569" />
-                        <stop offset="65%" stop-color="#334155" />
-                        <stop offset="100%" stop-color="#0f172a" />
-                      </linearGradient>
-                      <linearGradient id="pdp-shine" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#fff" stop-opacity="0" />
-                        <stop offset="42%" stop-color="#fff" stop-opacity="0.35" />
-                        <stop offset="48%" stop-color="#fff" stop-opacity="0.08" />
-                        <stop offset="100%" stop-color="#fff" stop-opacity="0" />
-                      </linearGradient>
-                      <linearGradient id="pdp-cap" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#2d2d2d" />
-                        <stop offset="100%" stop-color="#0a0a0a" />
-                      </linearGradient>
-                      <filter id="pdp-soft" x="-30%" y="-30%" width="160%" height="160%">
-                        <feGaussianBlur stdDeviation="4" result="b" />
-                        <feMerge>
-                          <feMergeNode in="b" />
-                          <feMergeNode in="SourceGraphic" />
-                        </feMerge>
-                      </filter>
-                    </defs>
-                    <rect width="900" height="1050" fill="url(#pdp-bg)" />
-                    <ellipse cx="450" cy="958" rx="240" ry="32" fill="url(#pdp-shadow)" />
-                    <g filter="url(#pdp-soft)" transform="translate(450, 480)">
-                      <rect x="-52" y="-395" width="104" height="52" rx="10" fill="url(#pdp-cap)" />
-                      <rect x="-44" y="-343" width="88" height="28" rx="5" fill="#1a1a1a" />
-                      <path
-                        d="M-78 -315 C-78 -330 -70 -340 -58 -340 L58 -340 C70 -340 78 -330 78 -315 L72 340 C72 355 62 365 50 365 L-50 365 C-62 365 -72 355 -72 340 Z"
-                        fill="url(#pdp-glass)"
-                      />
-                      <path d="M-65 -300 L65 -300 L58 320 L-58 320 Z" fill="url(#pdp-shine)" opacity="0.9" />
-                      <rect x="-40" y="-280" width="80" height="36" rx="3" fill="#fff" opacity="0.06" />
-                    </g>
-                    <text
-                      x="450"
-                      y="1000"
-                      text-anchor="middle"
-                      font-family="system-ui,Segoe UI,sans-serif"
-                      font-size="20"
-                      fill="#64748b"
-                      letter-spacing="0.08em"
-                    >
-                      OMBRE DEVISION · EDP
-                    </text>
-                  </svg>
+                    alt="Мужской парфюм в тёмном флаконе — студийный снимок"
+                    decoding="async"
+                    fetchpriority="high"
+                  />
                 </figure>
                 <button type="button" class="pdp__zoom-hint" tabindex="-1" aria-hidden="true">Увеличить</button>
               </div>
@@ -309,47 +260,14 @@
             <article class="card-mini reveal reveal--delay-1" data-reveal>
               <a href="#" class="card-mini__link">
                 <div class="card-mini__img js-card-img is-loaded">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 800 800"
+                  <img
+                    src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=88&amp;fm=jpg"
                     width="800"
                     height="800"
-                    role="img"
-                    aria-label="Slate — шампунь, флакон"
-                    focusable="false"
-                  >
-                    <defs>
-                      <linearGradient id="c1-sbg" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#f8fafc" />
-                        <stop offset="100%" stop-color="#e2e8f0" />
-                      </linearGradient>
-                      <linearGradient id="c1-bottle" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#e2e8f0" />
-                        <stop offset="45%" stop-color="#f8fafc" />
-                        <stop offset="55%" stop-color="#cbd5e1" />
-                        <stop offset="100%" stop-color="#94a3b8" />
-                      </linearGradient>
-                      <linearGradient id="c1-pump" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#334155" />
-                        <stop offset="100%" stop-color="#0f172a" />
-                      </linearGradient>
-                      <radialGradient id="c1-ssh" cx="50%" cy="100%" r="50%">
-                        <stop offset="0%" stop-color="#000" stop-opacity="0.12" />
-                        <stop offset="100%" stop-color="#000" stop-opacity="0" />
-                      </radialGradient>
-                    </defs>
-                    <rect width="800" height="800" fill="url(#c1-sbg)" />
-                    <ellipse cx="400" cy="698" rx="130" ry="22" fill="url(#c1-ssh)" />
-                    <g transform="translate(400, 380)">
-                      <rect x="-38" y="-268" width="76" height="72" rx="14" fill="url(#c1-pump)" />
-                      <rect x="-22" y="-196" width="44" height="36" rx="8" fill="#1e293b" />
-                      <rect x="-100" y="-165" width="200" height="360" rx="36" fill="url(#c1-bottle)" stroke="#cbd5e1" stroke-width="2" />
-                      <rect x="-88" y="-140" width="176" height="100" rx="12" fill="#fff" opacity="0.45" />
-                      <rect x="-70" y="40" width="140" height="140" rx="8" fill="#fff" opacity="0.25" />
-                      <text x="0" y="230" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="600" fill="#475569">SLATE</text>
-                      <text x="0" y="258" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#64748b">shampoo 400 ml</text>
-                    </g>
-                  </svg>
+                    alt="Косметика и флаконы в ванной, нейтральные тона"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div class="card-mini__bar">
                   <span class="card-mini__name">Slate, шампунь для волос, мужская линия, 400 ml</span>
@@ -360,48 +278,14 @@
             <article class="card-mini reveal reveal--delay-2" data-reveal>
               <a href="#" class="card-mini__link">
                 <div class="card-mini__img js-card-img is-loaded">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 800 800"
+                  <img
+                    src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=88&amp;fm=jpg"
                     width="800"
                     height="800"
-                    role="img"
-                    aria-label="Iron &amp; Oak — масло для бороды, флакон"
-                    focusable="false"
-                  >
-                    <defs>
-                      <linearGradient id="c2-abg" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#faf8f3" />
-                        <stop offset="100%" stop-color="#ede8dc" />
-                      </linearGradient>
-                      <linearGradient id="c2-amber" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#b45309" />
-                        <stop offset="40%" stop-color="#d97706" />
-                        <stop offset="100%" stop-color="#78350f" />
-                      </linearGradient>
-                      <linearGradient id="c2-liquid" x1="0%" y1="100%" x2="0%" y2="0%">
-                        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9" />
-                        <stop offset="100%" stop-color="#fcd34d" stop-opacity="0.5" />
-                      </linearGradient>
-                      <radialGradient id="c2-bsh" cx="50%" cy="100%" r="45%">
-                        <stop offset="0%" stop-color="#000" stop-opacity="0.15" />
-                        <stop offset="100%" stop-color="#000" stop-opacity="0" />
-                      </radialGradient>
-                    </defs>
-                    <rect width="800" height="800" fill="url(#c2-abg)" />
-                    <ellipse cx="400" cy="668" rx="120" ry="20" fill="url(#c2-bsh)" />
-                    <g transform="translate(400, 380)">
-                      <rect x="-26" y="-198" width="52" height="44" rx="10" fill="#1c1917" />
-                      <rect x="-14" y="-154" width="28" height="28" rx="5" fill="#292524" />
-                      <line x1="0" y1="-126" x2="0" y2="-220" stroke="#44403c" stroke-width="5" stroke-linecap="round" />
-                      <circle cx="0" cy="-232" r="10" fill="#1c1917" />
-                      <rect x="-62" y="-115" width="124" height="210" rx="42" fill="url(#c2-amber)" stroke="#92400e" stroke-width="2" />
-                      <ellipse cx="0" cy="-40" rx="48" ry="70" fill="url(#c2-liquid)" />
-                      <path d="M-50 -95 Q0 -115 50 -95 L45 80 Q0 95 -45 80 Z" fill="#fff" opacity="0.15" />
-                      <text x="0" y="150" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#78350f">IRON &amp; OAK</text>
-                      <text x="0" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#92400e">beard oil 30 ml</text>
-                    </g>
-                  </svg>
+                    alt="Масло для бороды в янтарном флаконе"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div class="card-mini__bar">
                   <span class="card-mini__name">Iron &amp; Oak, масло для бороды и усов, 30 ml</span>
@@ -412,53 +296,14 @@
             <article class="card-mini reveal reveal--delay-3" data-reveal>
               <a href="#" class="card-mini__link">
                 <div class="card-mini__img js-card-img is-loaded">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 800 800"
+                  <img
+                    src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=88&amp;fm=jpg"
                     width="800"
                     height="800"
-                    role="img"
-                    aria-label="Grey Code — парфюмерная вода, флакон"
-                    focusable="false"
-                  >
-                    <defs>
-                      <linearGradient id="c3-gbg" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#e8edf3" />
-                        <stop offset="100%" stop-color="#cbd5e1" />
-                      </linearGradient>
-                      <linearGradient id="c3-flacon" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#1e293b" />
-                        <stop offset="50%" stop-color="#334155" />
-                        <stop offset="100%" stop-color="#0f172a" />
-                      </linearGradient>
-                      <linearGradient id="c3-slab" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#94a3b8" />
-                        <stop offset="100%" stop-color="#64748b" />
-                      </linearGradient>
-                      <linearGradient id="c3-gshine" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#fff" stop-opacity="0" />
-                        <stop offset="45%" stop-color="#fff" stop-opacity="0.2" />
-                        <stop offset="55%" stop-color="#fff" stop-opacity="0" />
-                        <stop offset="100%" stop-color="#fff" stop-opacity="0" />
-                      </linearGradient>
-                      <radialGradient id="c3-gsh" cx="50%" cy="100%" r="55%">
-                        <stop offset="0%" stop-color="#000" stop-opacity="0.18" />
-                        <stop offset="100%" stop-color="#000" stop-opacity="0" />
-                      </radialGradient>
-                    </defs>
-                    <rect width="800" height="800" fill="url(#c3-gbg)" />
-                    <ellipse cx="400" cy="648" rx="200" ry="28" fill="url(#c3-gsh)" />
-                    <rect x="160" y="548" width="480" height="128" rx="16" fill="url(#c3-slab)" opacity="0.85" />
-                    <g transform="translate(400, 330)">
-                      <rect x="-44" y="-328" width="88" height="40" rx="8" fill="#0f172a" />
-                      <rect x="-36" y="-288" width="72" height="24" rx="4" fill="#1e293b" />
-                      <rect x="-76" y="-260" width="152" height="288" rx="22" fill="url(#c3-flacon)" />
-                      <rect x="-64" y="-240" width="128" height="200" rx="14" fill="url(#c3-gshine)" />
-                      <rect x="-52" y="-220" width="104" height="48" rx="4" fill="#fff" opacity="0.06" />
-                      <text x="0" y="210" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#1e293b">GREY CODE</text>
-                      <text x="0" y="236" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#475569">eau de parfum 100 ml</text>
-                    </g>
-                  </svg>
+                    alt="Парфюмерный флакон в тёмных тонах"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div class="card-mini__bar">
                   <span class="card-mini__name">Grey Code, парфюмерная вода для мужчин, 100 ml</span>
@@ -486,46 +331,26 @@
         <div class="footer-grid reveal" data-reveal>
           <div class="footer-visual">
             <div class="footer-visual__cell">
-              <svg
+              <img
                 class="footer-mosaic"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 400 400"
+                src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=82&amp;fm=jpg"
                 width="400"
                 height="400"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <defs>
-                  <linearGradient id="ft1-fm" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#e8eaee" />
-                    <stop offset="100%" stop-color="#cbd5e1" />
-                  </linearGradient>
-                </defs>
-                <rect width="400" height="400" fill="url(#ft1-fm)" />
-                <circle cx="200" cy="200" r="120" fill="#94a3b8" opacity="0.25" />
-                <circle cx="200" cy="200" r="72" fill="#64748b" opacity="0.2" />
-              </svg>
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="footer-visual__cell">
-              <svg
+              <img
                 class="footer-mosaic"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 400 400"
+                src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=82&amp;fm=jpg"
                 width="400"
                 height="400"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <defs>
-                  <linearGradient id="ft2-fm" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#f1f5f9" />
-                    <stop offset="100%" stop-color="#e2e8f0" />
-                  </linearGradient>
-                </defs>
-                <rect width="400" height="400" fill="url(#ft2-fm)" />
-                <rect x="72" y="108" width="256" height="184" rx="20" fill="#cbd5e1" opacity="0.5" />
-                <rect x="96" y="132" width="208" height="136" rx="12" fill="#94a3b8" opacity="0.25" />
-              </svg>
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="footer-visual__cell footer-visual__cell--logo">
               <svg class="logo__svg logo__svg--lg" width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
@@ -534,25 +359,15 @@
               <span class="footer-visual__apollo">APOLLO</span>
             </div>
             <div class="footer-visual__cell">
-              <svg
+              <img
                 class="footer-mosaic"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 400 400"
+                src="https://images.unsplash.com/photo-1595425970377-c9700cfd65b5?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=82&amp;fm=jpg"
                 width="400"
                 height="400"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <defs>
-                  <linearGradient id="ft3-fm" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop offset="0%" stop-color="#f8fafc" />
-                    <stop offset="100%" stop-color="#e2e8f0" />
-                  </linearGradient>
-                </defs>
-                <rect width="400" height="400" fill="url(#ft3-fm)" />
-                <path d="M80 300 L200 100 L320 300 Z" fill="#94a3b8" opacity="0.28" />
-                <path d="M120 280 L200 140 L280 280 Z" fill="#cbd5e1" opacity="0.4" />
-              </svg>
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
           <nav class="footer-nav" aria-label="Нижнее меню">
@@ -583,6 +398,6 @@
       </div>
     </footer>
 
-    <script src="app.js?v=pro-2026" defer></script>
+    <script src="app.js?v=photos-pro-2026" defer></script>
   </body>
 </html>
