@@ -1,86 +1,12 @@
 (function () {
   'use strict';
 
-  /** Запасной src: один раз на картинку, обработчик снимается сразу (иначе цикл error → новый src → error…) */
-  document.querySelectorAll('img.js-img-fallback').forEach(function (img) {
-    img.addEventListener('error', function onErr() {
-      img.removeEventListener('error', onErr);
-      var u = img.src || '';
-      if (u.indexOf('placeholder-') !== -1) return;
-      var fb = img.getAttribute('data-fallback');
-      var loc = img.getAttribute('data-local');
-      var next = '';
-      if (fb && fb.trim() && fb.indexOf('picsum.photos') === -1 && u.indexOf('picsum.photos') === -1) {
-        next = fb;
-      } else if (loc) {
-        try {
-          next = new URL(loc, document.baseURI || window.location.href).href;
-        } catch (e) {
-          next = loc;
-        }
-      }
-      if (next && next !== u) {
-        img.src = next;
-      }
-    });
-  });
-
-  /** Снятие скелетона после загрузки изображения (img или встроенный svg) */
-  document.querySelectorAll('img.js-img-load, svg.js-img-load').forEach(function (el) {
-    function done() {
-      var wrap = el.closest('.js-pdp-media') || el.closest('.js-card-img');
-      if (wrap) wrap.classList.add('is-loaded');
-    }
-    var tag = (el.tagName || '').toUpperCase();
-    if (tag === 'IMG' && el.complete && el.naturalWidth) {
-      done();
-    } else if (tag === 'IMG') {
-      el.addEventListener('load', done, { once: true });
-      el.addEventListener('error', done, { once: true });
-    } else {
-      requestAnimationFrame(done);
-    }
-  });
-
-  /** Скролл-ревил */
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var nodes = document.querySelectorAll('[data-reveal]');
-
-  function revealEl(el) {
+  document.querySelectorAll('[data-reveal]').forEach(function (el) {
     el.classList.add('is-visible');
-  }
+  });
 
-  function revealVisibleNow() {
-    nodes.forEach(function (el) {
-      var r = el.getBoundingClientRect();
-      if (r.top < window.innerHeight * 1.08 && r.bottom > -40) revealEl(el);
-    });
-  }
-
-  if (!reduceMotion && 'IntersectionObserver' in window) {
-    var io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            revealEl(entry.target);
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { root: null, rootMargin: '0px 0px 80px 0px', threshold: 0 }
-    );
-    nodes.forEach(function (el) {
-      io.observe(el);
-    });
-    requestAnimationFrame(revealVisibleNow);
-  } else {
-    nodes.forEach(revealEl);
-  }
-
-  /** Размеры и цена */
   var priceMain = document.getElementById('pdp-price-main');
   var priceSticky = document.getElementById('pdp-price-sticky');
-
   document.querySelectorAll('.size-row').forEach(function (row) {
     row.querySelectorAll('.size').forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -97,7 +23,6 @@
     });
   });
 
-  /** Избранное */
   document.querySelectorAll('.icon-fav').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var pressed = btn.getAttribute('aria-pressed') === 'true';
@@ -105,7 +30,6 @@
     });
   });
 
-  /** Аккордеон: один открытый блок или все свернуты */
   document.querySelectorAll('.accordion').forEach(function (root) {
     root.querySelectorAll('.accordion__trigger').forEach(function (trigger) {
       trigger.addEventListener('click', function () {
@@ -128,19 +52,9 @@
     });
   });
 
-  /** Липкая панель: только узкий экран, когда основная CTA вне вьюпорта */
   var sticky = document.getElementById('pdp-sticky');
   var mainCta = document.getElementById('main-cta');
   var mq = window.matchMedia('(max-width: 768px)');
-
-  function syncSticky() {
-    if (!sticky || !mainCta) return;
-    if (!mq.matches) {
-      sticky.hidden = true;
-      sticky.setAttribute('aria-hidden', 'true');
-      return;
-    }
-  }
 
   function setStickyVisible(show) {
     if (!sticky) return;
@@ -157,23 +71,21 @@
             setStickyVisible(false);
             return;
           }
-          var hide = entry.isIntersecting;
-          setStickyVisible(!hide);
+          setStickyVisible(!entry.isIntersecting);
         });
       },
       { root: null, threshold: 0, rootMargin: '0px 0px 8px 0px' }
     );
     ioCta.observe(mainCta);
     mq.addEventListener('change', function () {
-      syncSticky();
       if (!mq.matches) setStickyVisible(false);
     });
-    syncSticky();
   }
 
-  document.querySelector('.pdp-sticky__btn') &&
-    document.querySelector('.pdp-sticky__btn').addEventListener('click', function () {
-      var m = document.getElementById('main-cta');
-      if (m) m.click();
+  var stickyBtn = document.querySelector('.pdp-sticky__btn');
+  if (stickyBtn && mainCta) {
+    stickyBtn.addEventListener('click', function () {
+      mainCta.click();
     });
+  }
 })();
