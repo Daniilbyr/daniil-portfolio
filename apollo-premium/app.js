@@ -7,6 +7,27 @@
 
   var priceMain = document.getElementById('pdp-price-main');
   var priceSticky = document.getElementById('pdp-price-sticky');
+
+  function getActiveSizePrice() {
+    var active = document.querySelector('.size-row .size.size--active');
+    if (!active) return 158;
+    var p = active.getAttribute('data-price');
+    return parseInt(p, 10) || 158;
+  }
+
+  function getConcOffset() {
+    var active = document.querySelector('.concentration-row .conc.conc--active');
+    if (!active) return 0;
+    var o = active.getAttribute('data-price-offset');
+    return parseInt(o, 10) || 0;
+  }
+
+  function updateDisplayedPrices() {
+    var total = getActiveSizePrice() + getConcOffset();
+    if (priceMain) priceMain.textContent = String(total);
+    if (priceSticky) priceSticky.textContent = String(total);
+  }
+
   document.querySelectorAll('.size-row').forEach(function (row) {
     row.querySelectorAll('.size').forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -16,9 +37,21 @@
         });
         btn.classList.add('size--active');
         btn.setAttribute('aria-checked', 'true');
-        var p = btn.getAttribute('data-price');
-        if (p && priceMain) priceMain.textContent = p;
-        if (p && priceSticky) priceSticky.textContent = p;
+        updateDisplayedPrices();
+      });
+    });
+  });
+
+  document.querySelectorAll('.concentration-row').forEach(function (row) {
+    row.querySelectorAll('.conc').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        row.querySelectorAll('.conc').forEach(function (c) {
+          c.classList.remove('conc--active');
+          c.setAttribute('aria-checked', 'false');
+        });
+        btn.classList.add('conc--active');
+        btn.setAttribute('aria-checked', 'true');
+        updateDisplayedPrices();
       });
     });
   });
@@ -88,4 +121,6 @@
       mainCta.click();
     });
   }
+
+  updateDisplayedPrices();
 })();

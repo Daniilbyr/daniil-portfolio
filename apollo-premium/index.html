@@ -9,17 +9,17 @@
     <meta name="color-scheme" content="light" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="canonical" href="https://daniilbyr.github.io/daniil-portfolio/apollo-premium/" />
-    <title>Apollo — Ombre Devision | мужской парфюм</title>
+    <title>Apollo — мужской уход и парфюмерия | витрина</title>
     <meta
       name="description"
-      content="Ombre Devision — мужской eau de parfum, древесно-пряный аромат. Доставка, подлинность, возврат 14 дней. Apollo."
+      content="Демо витрины Apollo: главный экран, подборка, карточка мужского аромата Ombre Devision, отзывы, доставка по РФ."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://daniilbyr.github.io/daniil-portfolio/apollo-premium/" />
-    <meta property="og:title" content="Apollo — Ombre Devision | мужской парфюм" />
+    <meta property="og:title" content="Apollo — мужской уход и парфюмерия" />
     <meta
       property="og:description"
-      content="Мужской eau de parfum Ombre Devision: древесно-пряный силуэт. Доставка, подлинность, возврат 14 дней."
+      content="Главная, каталог-подборка и карточка товара в премиальном стиле."
     />
     <meta
       property="og:image"
@@ -32,7 +32,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=mens-2026-03-31" />
+    <link rel="stylesheet" href="styles.css?v=figma-vit-2026-03-31" />
   </head>
   <body class="page">
     <div class="page-bg" aria-hidden="true">
@@ -51,7 +51,7 @@
           <a href="#">Блог</a>
           <a href="#">Контакты</a>
         </nav>
-        <a class="logo" href="#" aria-label="Apollo — на главную">
+        <a class="logo" href="#main" aria-label="Apollo — на главную">
           <svg class="logo__svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path fill="currentColor" d="M12 2L2 20h4.5l1.4-2.8h7.2l1.4 2.8H22L12 2zm0 6.2l3.2 6.4h-6.4L12 8.2z" />
           </svg>
@@ -66,6 +66,167 @@
     </header>
 
     <main id="main">
+      <section class="hero-home" aria-labelledby="hero-heading">
+        <div class="container hero-home__inner">
+          <div class="hero-home__copy reveal" data-reveal>
+            <p class="hero-home__eyebrow">Мужская линия · премиум</p>
+            <h1 id="hero-heading" class="hero-home__title">
+              Apollo — ваш выбор<br />
+              <span class="hero-home__title-accent">для нового вас</span>
+            </h1>
+            <p class="hero-home__lead">
+              Парфюм и уход в одном ритме: сдержанная эстетика, понятная навигация и карточка товара в духе крупных витрин.
+            </p>
+            <div class="hero-home__cta">
+              <a class="btn btn--black" href="#product">В каталог — к товару</a>
+              <a class="hero-home__secondary" href="#best-collection">Лучшая подборка</a>
+            </div>
+          </div>
+          <div class="hero-home__visual reveal reveal--delay-1" data-reveal aria-hidden="true">
+            <div class="hero-home__frame">
+              <div class="hero-home__shine"></div>
+              <p class="hero-home__tag">NEW SEASON</p>
+              <p class="hero-home__brand">OMBRE · MEN</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="category-rail" role="navigation" aria-label="Быстрые категории">
+        <div class="container category-rail__track">
+          <a class="category-chip" href="#best-collection">Гигиена полости рта</a>
+          <a class="category-chip" href="#best-collection">Часы</a>
+          <a class="category-chip" href="#best-collection">Бритьё и триммеры</a>
+          <a class="category-chip" href="#best-collection">Маски и патчи</a>
+          <a class="category-chip" href="#best-collection">Кремы для глаз</a>
+          <a class="category-chip" href="#best-collection">Барбер</a>
+          <a class="category-chip" href="#best-collection">Аксессуары</a>
+          <a class="category-chip" href="#best-collection">Дорожные наборы</a>
+          <a class="category-chip category-chip--muted" href="#">Ещё категории</a>
+          <a class="category-chip category-chip--accent" href="#product">AI‑подбор аромата</a>
+        </div>
+      </div>
+
+      <section class="top-categories" aria-labelledby="top-cat-heading">
+        <div class="container">
+          <header class="top-categories__head reveal" data-reveal>
+            <h2 id="top-cat-heading" class="top-categories__title">Топ‑категории</h2>
+            <p class="top-categories__sub">
+              Широкий выбор для мужского ухода: от ежедневной гигиены до премиальной парфюмерии.
+            </p>
+          </header>
+          <div class="top-categories__grid">
+            <a class="top-cat-card reveal reveal--delay-1" data-reveal href="#product">
+              <span class="top-cat-card__label">Парфюмерия</span>
+              <span class="top-cat-card__hint">EDT · EDP · ниша</span>
+            </a>
+            <a class="top-cat-card reveal reveal--delay-2" data-reveal href="#best-collection">
+              <span class="top-cat-card__label">Электробритвы и&nbsp;триммеры</span>
+              <span class="top-cat-card__hint">Станки · насадки</span>
+            </a>
+            <a class="top-cat-card reveal reveal--delay-3" data-reveal href="#best-collection">
+              <span class="top-cat-card__label">Уход за руками</span>
+              <span class="top-cat-card__hint">Кремы · санитайзеры</span>
+            </a>
+            <a class="top-cat-card reveal" data-reveal href="#events-tips">
+              <span class="top-cat-card__label">Научные новинки</span>
+              <span class="top-cat-card__hint">Сыворотки · SPF</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="best-collection" id="best-collection" aria-labelledby="best-heading">
+        <div class="container">
+          <header class="best-collection__head reveal" data-reveal>
+            <p class="best-collection__eyebrow">Витрина</p>
+            <div class="best-collection__row">
+              <h2 id="best-heading" class="best-collection__title">Лучшая подборка</h2>
+              <a class="best-collection__all" href="#product">Купить сейчас</a>
+            </div>
+          </header>
+          <div class="best-collection__grid">
+            <article class="product-card reveal reveal--delay-1" data-reveal>
+              <a href="#product" class="product-card__link">
+                <div class="product-card__media">
+                  <img src="img/products/card-grey.jpg?v=studio-2026" width="640" height="800" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__name">Ombre Devision</h3>
+                  <p class="product-card__meta">eau de parfum · мужская линия</p>
+                  <p class="product-card__price"><span class="product-card__currency">$</span>158</p>
+                  <p class="product-card__rating" aria-label="Рейтинг 4 из 5">★★★★<span aria-hidden="true">☆</span> <span class="product-card__reviews">(84)</span></p>
+                </div>
+              </a>
+            </article>
+            <article class="product-card reveal reveal--delay-2" data-reveal>
+              <a href="#" class="product-card__link">
+                <div class="product-card__badge">−15%</div>
+                <div class="product-card__media">
+                  <img src="img/products/card-slate.jpg?v=studio-2026" width="640" height="800" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__name">Sauvage</h3>
+                  <p class="product-card__meta">Dior · eau de parfum</p>
+                  <p class="product-card__price">
+                    <span class="product-card__old">$220</span>
+                    <span class="product-card__currency">$</span>110
+                  </p>
+                  <p class="product-card__rating" aria-label="Рейтинг 4.8 из 5">★★★★★ <span class="product-card__reviews">(102)</span></p>
+                </div>
+              </a>
+            </article>
+            <article class="product-card reveal reveal--delay-3" data-reveal>
+              <a href="#" class="product-card__link">
+                <div class="product-card__media">
+                  <img src="img/products/card-beard.jpg?v=studio-2026" width="640" height="800" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__name">Iron &amp; Oak</h3>
+                  <p class="product-card__meta">масло для бороды · 30 ml</p>
+                  <p class="product-card__price"><span class="product-card__currency">$</span>24</p>
+                  <p class="product-card__rating" aria-label="Рейтинг 5 из 5">★★★★★ <span class="product-card__reviews">(31)</span></p>
+                </div>
+              </a>
+            </article>
+            <article class="product-card reveal" data-reveal>
+              <a href="#" class="product-card__link">
+                <div class="product-card__media">
+                  <img src="img/products/card-grey.jpg?v=studio-2026" width="640" height="800" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="product-card__body">
+                  <h3 class="product-card__name">Grey Code</h3>
+                  <p class="product-card__meta">парфюмерная вода · 100 ml</p>
+                  <p class="product-card__price"><span class="product-card__currency">$</span>68</p>
+                  <p class="product-card__rating" aria-label="Рейтинг 4.5 из 5">★★★★☆ <span class="product-card__reviews">(56)</span></p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="events-tips" id="events-tips" aria-labelledby="events-heading">
+        <div class="container events-tips__grid">
+          <article class="events-card reveal" data-reveal aria-labelledby="events-heading">
+            <p class="events-card__eyebrow">События</p>
+            <h2 id="events-heading" class="events-card__title">Мужской уход: встречи и разбор ароматов</h2>
+            <p class="events-card__text">
+              Новинки сезона, гостевые эксперты и разбор пирамидок нот — в шоуруме и онлайн. Подписка на анонсы в Telegram.
+            </p>
+            <a class="events-card__link" href="#">Узнать расписание</a>
+          </article>
+          <article class="events-card events-card--dark reveal reveal--delay-1" data-reveal aria-labelledby="tips-heading">
+            <p class="events-card__eyebrow">Гид</p>
+            <h2 id="tips-heading" class="events-card__title">Идеальная борода и кожа без сухости</h2>
+            <p class="events-card__text">
+              Короткие материалы: как подобрать масло, когда достаточно лёгкого крема и как не переборщить с шлейфом парфюма в офисе.
+            </p>
+            <a class="events-card__link" href="#">Читать советы</a>
+          </article>
+        </div>
+      </section>
+
       <div class="container container--narrow">
         <nav class="breadcrumbs reveal" aria-label="Хлебные крошки" data-reveal>
           <a href="#">Главная</a>
@@ -77,7 +238,7 @@
           <span class="breadcrumbs__current">Ombre Devision</span>
         </nav>
 
-        <article class="pdp" itemscope itemtype="https://schema.org/Product">
+        <article id="product" class="pdp" itemscope itemtype="https://schema.org/Product">
           <meta itemprop="name" content="Ombre Devision" />
           <meta itemprop="description" content="Мужской eau de parfum, древесно-пряный силуэт." />
           <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="visually-hidden">
@@ -167,7 +328,7 @@
               <div class="pdp__title-row">
                 <div class="pdp__title-block">
                   <p class="pdp__eyebrow">Мужская парфюмерия</p>
-                  <h1 class="pdp__title" itemprop="name">Ombre Devision</h1>
+                  <h2 class="pdp__title" itemprop="name">Ombre Devision</h2>
                 </div>
                 <button type="button" class="icon-fav" aria-label="Добавить в избранное" aria-pressed="false">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true">
@@ -196,6 +357,16 @@
                   <button type="button" class="size size--active" role="radio" aria-checked="true" data-price="158">30 ml</button>
                   <button type="button" class="size" role="radio" aria-checked="false" data-price="198">50 ml</button>
                   <button type="button" class="size" role="radio" aria-checked="false" data-price="248">100 ml</button>
+                </div>
+              </div>
+
+              <div class="pdp__field">
+                <p class="pdp__label" id="conc-label">Концентрация</p>
+                <div class="concentration-row" role="radiogroup" aria-labelledby="conc-label">
+                  <button type="button" class="conc conc--active" role="radio" aria-checked="true" data-price-offset="0">EDP</button>
+                  <button type="button" class="conc" role="radio" aria-checked="false" data-price-offset="-12">EDT</button>
+                  <button type="button" class="conc" role="radio" aria-checked="false" data-price-offset="-24">одеколон</button>
+                  <button type="button" class="conc" role="radio" aria-checked="false" data-price-offset="32">парфюм</button>
                 </div>
               </div>
 
@@ -233,6 +404,36 @@
               <p class="pdp__fineprint">Оплата картой, СБП, при получении · рассрочка 0% для постоянных клиентов</p>
             </div>
           </div>
+
+          <section class="pdp-reviews" aria-labelledby="reviews-heading">
+            <h2 id="reviews-heading" class="pdp-reviews__title">Отзывы покупателей</h2>
+            <ul class="pdp-reviews__list">
+              <li class="pdp-review">
+                <p class="pdp-review__head"><span class="pdp-review__name">Артём К.</span> · 12.11.2025</p>
+                <p class="pdp-review__stars" aria-label="5 из 5">★★★★★</p>
+                <p class="pdp-review__text">
+                  Беру второй флакон: держится весь день, шлейф деловой, без «сладкого». Для офиса и вечера — самое то.
+                </p>
+                <p class="pdp-review__rec">Рекомендую товар</p>
+              </li>
+              <li class="pdp-review">
+                <p class="pdp-review__head"><span class="pdp-review__name">Михаил С.</span> · 03.10.2025</p>
+                <p class="pdp-review__stars" aria-label="4 из 5">★★★★<span aria-hidden="true">☆</span></p>
+                <p class="pdp-review__text">
+                  Древесина и перец чувствуются сразу, кожа в базе — ближе к вечеру. Упаковка аккуратная, пульвер стабильный.
+                </p>
+                <p class="pdp-review__rec">Рекомендую товар</p>
+              </li>
+              <li class="pdp-review">
+                <p class="pdp-review__head"><span class="pdp-review__name">Илья В.</span> · 21.09.2025</p>
+                <p class="pdp-review__stars" aria-label="5 из 5">★★★★★</p>
+                <p class="pdp-review__text">
+                  Искал что-то спокойнее Sauvage — здесь меньше «крика», больше структуры. Жене тоже зашёл шлейф.
+                </p>
+                <p class="pdp-review__rec">Рекомендую товар</p>
+              </li>
+            </ul>
+          </section>
         </article>
       </div>
 
@@ -383,7 +584,7 @@
 
     <footer class="site-footer site-footer--editorial">
       <div class="container">
-        <div class="footer-grid reveal" data-reveal>
+        <div class="footer-top reveal" data-reveal>
           <div class="footer-visual">
             <div class="footer-visual__cell">
               <img
@@ -425,34 +626,69 @@
               />
             </div>
           </div>
-          <nav class="footer-nav" aria-label="Нижнее меню">
-            <a href="#">Каталог</a>
-            <a href="#">О нас</a>
-            <a href="#">Блог</a>
-            <a href="#">Контакты</a>
+          <nav class="footer-mega" aria-label="Разделы магазина">
+            <div class="footer-mega__col">
+              <p class="footer-mega__title">Магазин</p>
+              <a href="#best-collection">Акции и предложения</a>
+              <a href="#product">Парфюмерия</a>
+              <a href="#">Уход за лицом</a>
+              <a href="#">Тело</a>
+              <a href="#">Волосы и кожа головы</a>
+              <a href="#">Руки</a>
+              <a href="#">Борода и усы</a>
+              <a href="#">Бритвы и триммеры</a>
+              <a href="#product">AI‑консультант</a>
+              <a href="#">Подарки и сертификаты</a>
+            </div>
+            <div class="footer-mega__col">
+              <p class="footer-mega__title">Сервис</p>
+              <a href="#">Вопросы и ответы</a>
+              <a href="#">Заказы</a>
+              <a href="#">Доставка</a>
+              <a href="#">Возврат</a>
+              <a href="#">Подбор объёма</a>
+              <a href="#">Уход за продуктом</a>
+              <a href="#">Гарантия</a>
+              <a href="#">Контакты</a>
+            </div>
+            <div class="footer-mega__col">
+              <p class="footer-mega__title">Услуги</p>
+              <a href="#">Все услуги</a>
+              <a href="#">Рассрочка</a>
+              <a href="#">Заказ онлайн — получение в точке</a>
+              <a href="#">Программы для клиентов</a>
+            </div>
+            <div class="footer-mega__col">
+              <p class="footer-mega__title">Кабинет</p>
+              <a href="#">Мои заказы</a>
+              <a href="#">Профиль</a>
+              <a href="#">Избранное</a>
+              <a href="#">Подарочные карты</a>
+              <p class="footer-mega__title footer-mega__title--spaced">Компания</p>
+              <a href="#">О бренде</a>
+              <a href="#">Магазины</a>
+              <a href="#">Вакансии</a>
+            </div>
           </nav>
-          <div class="footer-tools">
-            <a href="#">Поиск</a>
-            <a href="#">Избранное</a>
-            <a href="#">Корзина (0)</a>
-          </div>
-          <div class="footer-social">
-            <a href="#" rel="noopener noreferrer">TELEGRAM</a>
-            <a href="#" rel="noopener noreferrer">INSTAGRAM</a>
-            <a href="#" rel="noopener noreferrer">PINTEREST</a>
-            <a href="#" rel="noopener noreferrer">YOUTUBE</a>
-            <a href="#" rel="noopener noreferrer">LINKED IN</a>
-          </div>
+        </div>
+        <div class="footer-social-row">
+          <a href="#" rel="noopener noreferrer">Telegram</a>
+          <a href="#" rel="noopener noreferrer">Instagram</a>
+          <a href="#" rel="noopener noreferrer">ВКонтакте</a>
+          <a href="#" rel="noopener noreferrer">YouTube</a>
         </div>
         <div class="footer-legal">
           <a href="#">Политика конфиденциальности</a>
-          <a href="#">Оферта</a>
+          <a href="#">Публичная оферта</a>
+          <a href="#">Условия использования</a>
+          <a href="#">Настройки cookie</a>
+          <a href="#">Карта сайта</a>
           <a href="#">Реквизиты</a>
         </div>
-        <p class="footer-copy">© 2026 Apollo · мужской уход и парфюмерия</p>
+        <p class="footer-copy">© 2026 Apollo · мужской уход и парфюмерия · демо-макет</p>
       </div>
     </footer>
 
-    <script src="app.js?v=mens-2026-03-31" defer></script>
+    <script src="app.js?v=figma-vit-2026-03-31" defer></script>
   </body>
 </html>
