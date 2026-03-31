@@ -15,6 +15,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="https://picsum.photos" />
   </head>
   <body>
     <a class="skip" href="#main">К содержанию</a>
@@ -43,7 +46,7 @@
 
     <main id="main">
       <div class="container container--narrow">
-        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <nav class="breadcrumbs reveal" aria-label="Хлебные крошки" data-reveal>
           <a href="#">Главная</a>
           <span class="breadcrumbs__sep">/</span>
           <a href="#">Каталог</a>
@@ -55,19 +58,23 @@
 
         <article class="pdp">
           <div class="pdp__grid">
-            <div class="pdp__gallery">
+            <div class="pdp__gallery reveal reveal--delay-1" data-reveal>
               <figure class="pdp__figure">
+                <!-- Основной кадр: парфюм; fallback — picsum если Unsplash недоступен -->
                 <img
-                  src="https://images.unsplash.com/photo-1595425970377-c970029bf94d?auto=format&fit=crop&w=1200&q=85"
+                  class="pdp__photo js-img-fallback"
+                  src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&amp;fit=crop&amp;w=1200&amp;h=1400&amp;q=85"
+                  data-fallback="https://picsum.photos/id/312/900/1050"
                   alt="Флакон парфюма на камне"
-                  width="1200"
-                  height="1400"
+                  width="900"
+                  height="1050"
                   loading="eager"
                   decoding="async"
+                  fetchpriority="high"
                 />
               </figure>
             </div>
-            <div class="pdp__info">
+            <div class="pdp__info reveal reveal--delay-2" data-reveal>
               <div class="pdp__title-row">
                 <h1 class="pdp__title">OMBRE DEVISION</h1>
                 <button type="button" class="icon-fav" aria-label="В избранное">♡</button>
@@ -106,13 +113,15 @@
 
       <section class="related" aria-labelledby="related-heading">
         <div class="container">
-          <h2 id="related-heading" class="related__title">YOU MIGHT ALSO LIKE</h2>
+          <h2 id="related-heading" class="related__title reveal" data-reveal>YOU MIGHT ALSO LIKE</h2>
           <div class="related__grid">
-            <article class="card-mini">
+            <article class="card-mini reveal reveal--delay-1" data-reveal>
               <a href="#" class="card-mini__link">
                 <div class="card-mini__img">
                   <img
-                    src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=800&q=85"
+                    class="js-img-fallback"
+                    src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=85"
+                    data-fallback="https://picsum.photos/id/429/800/800"
                     alt=""
                     width="800"
                     height="800"
@@ -125,11 +134,13 @@
                 </div>
               </a>
             </article>
-            <article class="card-mini">
+            <article class="card-mini reveal reveal--delay-2" data-reveal>
               <a href="#" class="card-mini__link">
                 <div class="card-mini__img">
                   <img
-                    src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=800&q=85"
+                    class="js-img-fallback"
+                    src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=85"
+                    data-fallback="https://picsum.photos/id/625/800/800"
                     alt=""
                     width="800"
                     height="800"
@@ -142,11 +153,13 @@
                 </div>
               </a>
             </article>
-            <article class="card-mini">
+            <article class="card-mini reveal reveal--delay-3" data-reveal>
               <a href="#" class="card-mini__link">
                 <div class="card-mini__img">
                   <img
-                    src="https://images.unsplash.com/photo-1571875257727-256c39da42af?auto=format&fit=crop&w=800&q=85"
+                    class="js-img-fallback"
+                    src="https://images.unsplash.com/photo-1571875257727-256c39da42af?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=85"
+                    data-fallback="https://picsum.photos/id/488/800/800"
                     alt=""
                     width="800"
                     height="800"
@@ -166,11 +179,13 @@
 
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-grid">
+        <div class="footer-grid reveal" data-reveal>
           <div class="footer-visual">
             <div class="footer-visual__cell">
               <img
-                src="https://images.unsplash.com/photo-1592945403244-b3fbafd7b650?auto=format&fit=crop&w=400&q=80"
+                class="js-img-fallback"
+                src="https://images.unsplash.com/photo-1592945403244-b3fbafd7b650?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80"
+                data-fallback="https://picsum.photos/id/338/400/400"
                 alt=""
                 width="400"
                 height="400"
@@ -179,7 +194,9 @@
             </div>
             <div class="footer-visual__cell">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                class="js-img-fallback"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80"
+                data-fallback="https://picsum.photos/id/64/400/400"
                 alt=""
                 width="400"
                 height="400"
@@ -194,7 +211,9 @@
             </div>
             <div class="footer-visual__cell">
               <img
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80"
+                class="js-img-fallback"
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80"
+                data-fallback="https://picsum.photos/id/453/400/400"
                 alt=""
                 width="400"
                 height="400"
