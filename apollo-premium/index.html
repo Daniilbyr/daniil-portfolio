@@ -2,24 +2,6 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <script>
-      (function () {
-        try {
-          var b = document.createElement('base');
-          if (location.protocol === 'file:') {
-            var u = location.href;
-            b.href = u.slice(0, u.lastIndexOf('/') + 1);
-          } else {
-            var path = location.pathname || '';
-            var key = 'apollo-premium';
-            var idx = path.toLowerCase().indexOf(key);
-            if (idx === -1) return;
-            b.href = location.origin + path.slice(0, idx + key.length) + '/';
-          }
-          document.head.insertBefore(b, document.head.firstChild);
-        } catch (e) {}
-      })();
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#eceef1" />
     <meta name="color-scheme" content="light" />
@@ -34,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=base-href-assets" />
+    <link rel="stylesheet" href="/daniil-portfolio/apollo-premium/styles.css?v=root-assets" />
   </head>
   <body class="page">
     <div class="page-bg" aria-hidden="true">
@@ -95,8 +77,8 @@
                 <figure class="pdp__figure">
                   <img
                     class="pdp__photo js-img-fallback js-img-load"
-                    src="img/products/ombre.svg"
-                    data-local="img/placeholder-tall.svg"
+                    src="/daniil-portfolio/apollo-premium/img/products/ombre.svg"
+                    data-local="/daniil-portfolio/apollo-premium/img/placeholder-tall.svg"
                     alt="Ombre Devision — флакон мужского парфюма"
                     width="900"
                     height="1050"
@@ -265,8 +247,8 @@
                   <div class="card-mini__skeleton" aria-hidden="true"></div>
                   <img
                     class="js-img-fallback js-img-load"
-                    src="img/products/slate.svg"
-                    data-local="img/placeholder-square.svg"
+                    src="/daniil-portfolio/apollo-premium/img/products/slate.svg"
+                    data-local="/daniil-portfolio/apollo-premium/img/placeholder-square.svg"
                     alt="Slate — шампунь, флакон"
                     width="800"
                     height="800"
@@ -286,8 +268,8 @@
                   <div class="card-mini__skeleton" aria-hidden="true"></div>
                   <img
                     class="js-img-fallback js-img-load"
-                    src="img/products/beard-oil.svg"
-                    data-local="img/placeholder-square.svg"
+                    src="/daniil-portfolio/apollo-premium/img/products/beard-oil.svg"
+                    data-local="/daniil-portfolio/apollo-premium/img/placeholder-square.svg"
                     alt="Iron &amp; Oak — масло для бороды, флакон"
                     width="800"
                     height="800"
@@ -307,8 +289,8 @@
                   <div class="card-mini__skeleton" aria-hidden="true"></div>
                   <img
                     class="js-img-fallback js-img-load"
-                    src="img/products/grey-code.svg"
-                    data-local="img/placeholder-square.svg"
+                    src="/daniil-portfolio/apollo-premium/img/products/grey-code.svg"
+                    data-local="/daniil-portfolio/apollo-premium/img/placeholder-square.svg"
                     alt="Grey Code — парфюмерная вода, флакон"
                     width="800"
                     height="800"
@@ -344,9 +326,9 @@
             <div class="footer-visual__cell">
               <img
                 class="js-img-fallback js-img-load"
-                src="img/footer-mosaic-1.svg"
+                src="/daniil-portfolio/apollo-premium/img/footer-mosaic-1.svg"
                 data-fallback=""
-                data-local="img/placeholder-square.svg"
+                data-local="/daniil-portfolio/apollo-premium/img/placeholder-square.svg"
                 alt=""
                 width="400"
                 height="400"
@@ -357,9 +339,9 @@
             <div class="footer-visual__cell">
               <img
                 class="js-img-fallback js-img-load"
-                src="img/footer-mosaic-2.svg"
+                src="/daniil-portfolio/apollo-premium/img/footer-mosaic-2.svg"
                 data-fallback=""
-                data-local="img/placeholder-square.svg"
+                data-local="/daniil-portfolio/apollo-premium/img/placeholder-square.svg"
                 alt=""
                 width="400"
                 height="400"
@@ -376,9 +358,9 @@
             <div class="footer-visual__cell">
               <img
                 class="js-img-fallback js-img-load"
-                src="img/footer-mosaic-3.svg"
+                src="/daniil-portfolio/apollo-premium/img/footer-mosaic-3.svg"
                 data-fallback=""
-                data-local="img/placeholder-square.svg"
+                data-local="/daniil-portfolio/apollo-premium/img/placeholder-square.svg"
                 alt=""
                 width="400"
                 height="400"
@@ -415,6 +397,6 @@
       </div>
     </footer>
 
-    <script src="app.js" defer></script>
+    <script src="/daniil-portfolio/apollo-premium/app.js" defer></script>
   </body>
 </html>
