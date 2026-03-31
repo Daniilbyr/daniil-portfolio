@@ -14,7 +14,8 @@
       }
       if (loc) {
         try {
-          img.src = new URL(loc, window.location.href).href;
+          var docBase = document.baseURI || window.location.href;
+          img.src = new URL(loc, docBase).href;
         } catch (e) {
           img.src = loc;
         }

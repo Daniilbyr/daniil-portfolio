@@ -2,6 +2,24 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <script>
+      (function () {
+        try {
+          var b = document.createElement('base');
+          if (location.protocol === 'file:') {
+            var u = location.href;
+            b.href = u.slice(0, u.lastIndexOf('/') + 1);
+          } else {
+            var path = location.pathname || '';
+            var key = 'apollo-premium';
+            var idx = path.toLowerCase().indexOf(key);
+            if (idx === -1) return;
+            b.href = location.origin + path.slice(0, idx + key.length) + '/';
+          }
+          document.head.insertBefore(b, document.head.firstChild);
+        } catch (e) {}
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#eceef1" />
     <meta name="color-scheme" content="light" />
@@ -16,7 +34,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=local-product-svgs" />
+    <link rel="stylesheet" href="styles.css?v=base-href-assets" />
   </head>
   <body class="page">
     <div class="page-bg" aria-hidden="true">
