@@ -21,6 +21,7 @@ npx --yes serve .
 
 - `https://<user>.github.io/daniil-portfolio/landing-traffic-demo/`
 - `https://<user>.github.io/daniil-portfolio/tilda-style-ig-tg-example/`
-- `https://<user>.github.io/daniil-portfolio/apollo-men-landing/` (демо маркетплейса по макету Apollo)
+- `https://<user>.github.io/daniil-portfolio/apollo-men-landing/` (тёмная тема, каталог)
+- `https://<user>.github.io/daniil-portfolio/apollo-premium/` (монохром, карточка товара по новым макетам)
 
 В откликах и резюме используйте основную ссылку на портфолио вместо чужих сайтов.

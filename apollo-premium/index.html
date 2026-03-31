@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apollo — Ombre Devision | парфюм</title>
+    <meta
+      name="description"
+      content="Apollo — мужской уход премиум-класса. Карточка товара: минимализм, чистая вёрстка."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">К содержанию</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <nav class="nav-main" aria-label="Основное меню">
+          <a href="#">Каталог</a>
+          <a href="#">О нас</a>
+          <a href="#">Блог</a>
+          <a href="#">Контакты</a>
+        </nav>
+        <a class="logo" href="#" aria-label="Apollo — на главную">
+          <svg class="logo__svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 2L2 20h4.5l1.4-2.8h7.2l1.4 2.8H22L12 2zm0 6.2l3.2 6.4h-6.4L12 8.2z" />
+          </svg>
+          <span class="logo__text">APOLLO</span>
+        </a>
+        <div class="nav-tools">
+          <a href="#" class="nav-tools__link"><span class="nav-tools__ic" aria-hidden="true">⌕</span> Поиск</a>
+          <a href="#" class="nav-tools__link"><span class="nav-tools__ic" aria-hidden="true">♡</span> Избранное</a>
+          <a href="#" class="nav-tools__link"><span class="nav-tools__ic" aria-hidden="true">▢</span> Корзина (0)</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="container container--narrow">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="#">Главная</a>
+          <span class="breadcrumbs__sep">/</span>
+          <a href="#">Каталог</a>
+          <span class="breadcrumbs__sep">/</span>
+          <a href="#">Парфюм</a>
+          <span class="breadcrumbs__sep">/</span>
+          <span class="breadcrumbs__current">Ombre Devision</span>
+        </nav>
+
+        <article class="pdp">
+          <div class="pdp__grid">
+            <div class="pdp__gallery">
+              <figure class="pdp__figure">
+                <img
+                  src="https://images.unsplash.com/photo-1595425970377-c970029bf94d?auto=format&fit=crop&w=1200&q=85"
+                  alt="Флакон парфюма на камне"
+                  width="1200"
+                  height="1400"
+                  loading="eager"
+                  decoding="async"
+                />
+              </figure>
+            </div>
+            <div class="pdp__info">
+              <div class="pdp__title-row">
+                <h1 class="pdp__title">OMBRE DEVISION</h1>
+                <button type="button" class="icon-fav" aria-label="В избранное">♡</button>
+              </div>
+              <p class="pdp__price">158 $</p>
+
+              <div class="pdp__field">
+                <p class="pdp__label">Объём</p>
+                <div class="size-row" role="group" aria-label="Выбор объёма">
+                  <button type="button" class="size size--active">30 ML</button>
+                  <button type="button" class="size">50 ML</button>
+                  <button type="button" class="size">100 ML</button>
+                </div>
+              </div>
+
+              <div class="pdp__desc">
+                <p>
+                  Верхние ноты — <strong>бергамот</strong> и цитрус, холодный старт для дневного ношения. В сердце —
+                  <strong>чёрный перец</strong> и пряности, которые держат шлейф ближе к коже.
+                </p>
+                <p>
+                  База раскрывается <strong>кедром</strong>, сухой древесиной и лёгкой кожаной амброй — без сладости,
+                  с характером.
+                </p>
+                <p>
+                  Универсальный силуэт: офис, вечер, поездка. Стойкость 8–10 часов на ткани и коже.
+                </p>
+                <p>Сделано для тех, кто выбирает сдержанную роскошь вместо крика.</p>
+              </div>
+
+              <button type="button" class="btn btn--black">ADD TO CART</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <section class="related" aria-labelledby="related-heading">
+        <div class="container">
+          <h2 id="related-heading" class="related__title">YOU MIGHT ALSO LIKE</h2>
+          <div class="related__grid">
+            <article class="card-mini">
+              <a href="#" class="card-mini__link">
+                <div class="card-mini__img">
+                  <img
+                    src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=800&q=85"
+                    alt=""
+                    width="800"
+                    height="800"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-mini__bar">
+                  <span class="card-mini__name">SYOSS Shampoo, 450 ml</span>
+                  <span class="card-mini__price">16 $</span>
+                </div>
+              </a>
+            </article>
+            <article class="card-mini">
+              <a href="#" class="card-mini__link">
+                <div class="card-mini__img">
+                  <img
+                    src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=800&q=85"
+                    alt=""
+                    width="800"
+                    height="800"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-mini__bar">
+                  <span class="card-mini__name">King&apos;s Sword, oil</span>
+                  <span class="card-mini__price">24 $</span>
+                </div>
+              </a>
+            </article>
+            <article class="card-mini">
+              <a href="#" class="card-mini__link">
+                <div class="card-mini__img">
+                  <img
+                    src="https://images.unsplash.com/photo-1571875257727-256c39da42af?auto=format&fit=crop&w=800&q=85"
+                    alt=""
+                    width="800"
+                    height="800"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="card-mini__bar">
+                  <span class="card-mini__name">Victor &amp; Rolf, cream</span>
+                  <span class="card-mini__price">32 $</span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-visual">
+            <div class="footer-visual__cell">
+              <img
+                src="https://images.unsplash.com/photo-1592945403244-b3fbafd7b650?auto=format&fit=crop&w=400&q=80"
+                alt=""
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+            <div class="footer-visual__cell">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                alt=""
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+            <div class="footer-visual__cell footer-visual__cell--logo">
+              <svg class="logo__svg logo__svg--lg" width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 2L2 20h4.5l1.4-2.8h7.2l1.4 2.8H22L12 2zm0 6.2l3.2 6.4h-6.4L12 8.2z" />
+              </svg>
+              <span class="footer-visual__apollo">APOLLO</span>
+            </div>
+            <div class="footer-visual__cell">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80"
+                alt=""
+                width="400"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <nav class="footer-nav" aria-label="Нижнее меню">
+            <a href="#">Каталог</a>
+            <a href="#">О нас</a>
+            <a href="#">Блог</a>
+            <a href="#">Контакты</a>
+          </nav>
+          <div class="footer-tools">
+            <a href="#">Поиск</a>
+            <a href="#">Избранное</a>
+            <a href="#">Корзина (0)</a>
+          </div>
+          <div class="footer-social">
+            <a href="#">TELEGRAM</a>
+            <a href="#">INSTAGRAM</a>
+            <a href="#">PINTEREST</a>
+            <a href="#">YOUTUBE</a>
+            <a href="#">LINKED IN</a>
+          </div>
+        </div>
+        <p class="footer-copy">© ALL RIGHTS RESERVED 2026</p>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
